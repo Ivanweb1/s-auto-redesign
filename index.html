@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="S-AUTO — автомобили в рассрочку и под выкуп в Красноярске без участия банков." />
+    <title>S-AUTO — автомобиль в рассрочку</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="header" id="top">
+        <div class="utility-bar">
+          <span>Красноярск</span>
+          <span>ул. 78 Добровольческой бригады, 14Б, офис 63</span>
+          <span>ПН–ПТ · 10:00–18:00</span>
+          <a href="mailto:s-auto@internet.ru">s-auto@internet.ru</a>
+        </div>
+        <div class="header-main">
+          <a class="brand" href="#top" aria-label="S-AUTO — на главную">
+            <img class="brand-logo" src="assets/s-auto-logo.png" alt="S-AUTO — автомобили в рассрочку" />
+          </a>
+
+          <nav class="nav" id="main-nav" aria-label="Основная навигация">
+            <a href="https://s-auto.company/catalog/">Автомобили</a>
+            <a href="https://s-auto.company/services/">Как это работает</a>
+            <a href="https://s-auto.company/services/">Условия</a>
+            <a href="https://s-auto.company/contacts/">Контакты</a>
+            <div class="mobile-nav-info">
+              <p><span>Адрес</span>Красноярск, ул. 78 Добровольческой бригады, 14Б, офис 63</p>
+              <p><span>Режим работы</span>ПН–ПТ, 10:00–18:00</p>
+              <a class="mobile-phone" href="tel:+79080228000">+7 908 022-80-00</a>
+              <button class="button js-open-modal" type="button">Оставить заявку</button>
+            </div>
+          </nav>
+
+          <div class="header-actions">
+            <a class="phone" href="tel:+79080228000"><span>Позвонить нам</span>+7 908 022-80-00</a>
+            <button class="button button-small js-open-modal" type="button">Оставить заявку</button>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Открыть меню"><span></span><span></span></button>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero conversion-hero hero-slider" aria-label="Главные предложения S-AUTO">
+          <article class="hero-slide is-active" data-slide aria-hidden="false">
+            <img class="hero-image" src="assets/s-auto-camry-motion.png" alt="Toyota Camry в движении на фоне вечернего Красноярска" />
+            <div class="hero-shade"></div>
+            <div class="hero-copy">
+              <h1 id="hero-title">Автомобиль<br />в рассрочку<br /><em>без банка</em></h1>
+              <p>Выберите машину в&nbsp;нашем каталоге, на&nbsp;Дроме, Авито или Авто.ру. Мы выкупим её и&nbsp;оформим рассрочку на&nbsp;понятных условиях.</p>
+              <div class="fact-chips"><span>Решение за 1 час</span><span>Кредитная история не важна</span></div>
+              <div class="hero-actions">
+                <button class="button js-open-modal" type="button">Подобрать автомобиль <span>↗</span></button>
+                <a class="text-link" href="https://s-auto.company/services/"><span class="play">↓</span> Узнать условия</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="hero-slide" data-slide aria-hidden="true">
+            <img class="hero-image" src="assets/s-auto-choice-lineup.png" alt="Большой выбор автомобилей разных классов" />
+            <div class="hero-shade"></div>
+            <div class="hero-copy">
+              <h2>Выбирайте любую<br /><em>Мы поможем купить</em></h2>
+              <p>Сотни автомобилей в&nbsp;каталоге и&nbsp;весь рынок — от&nbsp;городских седанов до&nbsp;семейных кроссоверов. Новый или с&nbsp;пробегом.</p>
+              <div class="fact-chips"><span>Любые марки и классы</span><span>Новые и с пробегом</span></div>
+              <div class="hero-actions">
+                <a class="button" href="https://s-auto.company/catalog/">Смотреть каталог <span>↗</span></a>
+                <button class="text-button js-open-modal" type="button"><span class="play">+</span> Оставить заявку</button>
+              </div>
+            </div>
+          </article>
+
+          <div class="slider-controls" aria-label="Управление слайдером">
+            <button class="slider-arrow" type="button" data-prev aria-label="Предыдущий слайд">←</button>
+            <div class="slider-dots" role="tablist" aria-label="Выбор слайда">
+              <button class="slider-dot is-active" type="button" data-slide-to="0" role="tab" aria-selected="true" aria-label="Слайд 1"></button>
+              <button class="slider-dot" type="button" data-slide-to="1" role="tab" aria-selected="false" aria-label="Слайд 2"></button>
+            </div>
+            <span class="slider-count"><b>01</b> / 02</span>
+            <button class="slider-arrow" type="button" data-next aria-label="Следующий слайд">→</button>
+          </div>
+        </section>
+
+        <section class="trust-line" aria-label="Преимущества S-AUTO">
+          <span><b>1 час</b> на решение</span>
+          <span><b>Без банков</b> напрямую</span>
+          <span><b>Любая</b> кредитная история</span>
+          <span><b>Новые</b> и с пробегом</span>
+          <span><b>Досрочное</b> погашение</span>
+        </section>
+
+      </main>
+    </div>
+
+    <dialog class="modal" id="request-modal">
+      <button class="modal-close" type="button" aria-label="Закрыть">×</button>
+      <span class="eyebrow dark"><span></span> Заявка</span>
+      <h2>Подберём условия<br />под ваш автомобиль</h2>
+      <p>Оставьте контакты — специалист S-AUTO перезвонит вам в течение рабочего дня.</p>
+      <form id="request-form">
+        <label>Ваше имя<input name="name" autocomplete="name" placeholder="Александр" required /></label>
+        <label>Телефон<input name="phone" inputmode="tel" autocomplete="tel" placeholder="+7 900 000-00-00" required /></label>
+        <button class="button" type="submit">Отправить заявку <span>↗</span></button>
+        <small>Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.</small>
+      </form>
+      <div class="success" hidden><span>✓</span><h3>Заявка принята</h3><p>Спасибо! Мы свяжемся с вами в рабочее время.</p></div>
+    </dialog>
+    <script src="script.js"></script>
+  </body>
+</html>
