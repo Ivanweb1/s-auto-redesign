@@ -72,7 +72,8 @@ body{background:#fff}.page-shell{width:100%;margin:0;box-shadow:none}.conversion
   .trust-line{grid-template-columns:repeat(2,1fr);gap:0;padding:0 16px;background:#f7f5f0;align-items:stretch}
   .trust-line span{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;min-height:82px;padding:16px 14px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);font-size:11px;line-height:1.4;letter-spacing:.45px;white-space:normal}
   .trust-line span:nth-child(2n){border-right:0}
-  .trust-line span:last-child{grid-column:1/-1;min-height:82px;border-right:0;border-bottom:0}
+  .trust-line span:last-child{grid-column:1/-1;flex-direction:row;justify-content:flex-start;align-items:center;gap:6px;min-height:70px;border-right:0;border-bottom:0;white-space:nowrap}
+  .trust-line span:last-child b{margin-bottom:0}
   .trust-line span::before{content:none}
   .trust-line b{display:block;margin-bottom:4px;font-size:13px;line-height:1.2}
   .mobile-nav-info p span{font-size:11px}
