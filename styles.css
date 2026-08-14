@@ -199,7 +199,7 @@ body{background:#fff}.page-shell{width:100%;margin:0;box-shadow:none}.conversion
   color:#9da4a8;
 }
 .copyrus-logo{display:block;width:154px;height:auto;margin-top:6px;filter:saturate(.88) brightness(1.03)}
-.footer-developer{margin:42px 0 0;font-size:12px;line-height:1.5;color:#858d91}
+.footer .footer-developer{margin:42px 0 0;font-size:12px;line-height:1.5;color:#858d91}
 .footer-developer a{font-size:12px;font-weight:500;color:var(--orange)}
 .footer-developer a:hover{color:#fff}
 
@@ -217,7 +217,7 @@ body{background:#fff}.page-shell{width:100%;margin:0;box-shadow:none}.conversion
   .footer-contact{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:0 30px;padding-top:36px;border-top:1px solid rgba(255,255,255,.12)}
   .footer-contact-row{grid-column:1}
   .footer-legal{grid-column:2;grid-row:1/5;margin:0;padding:0 0 0 30px;border-top:0;border-left:1px solid rgba(255,255,255,.12)}
-  .footer-developer{grid-column:1;margin-top:8px}
+  .footer .footer-developer{grid-column:1;margin-top:8px}
 }
 
 @media(max-width:560px){
@@ -238,6 +238,6 @@ body{background:#fff}.page-shell{width:100%;margin:0;box-shadow:none}.conversion
   .footer-legal{width:100%;max-width:none;margin-top:11px;padding:24px 0 0;border-top:1px solid rgba(255,255,255,.12);border-left:0}
   .footer-legal p{font-size:11px}
   .copyrus-logo{width:140px}
-  .footer-developer{margin-top:36px;font-size:11px}
+  .footer .footer-developer{margin-top:36px;font-size:11px}
   .footer-developer a{font-size:11px}
 }
