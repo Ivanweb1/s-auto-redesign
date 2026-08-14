@@ -78,3 +78,34 @@ body{background:#fff}.page-shell{width:100%;margin:0;box-shadow:none}.conversion
   .trust-line b{display:block;margin-bottom:4px;font-size:13px;line-height:1.2}
   .mobile-nav-info p span{font-size:11px}
 }
+
+/* Compact conversion footer */
+.footer{position:relative;overflow:hidden;padding:72px var(--content-gutter) 24px;background:radial-gradient(circle at 84% 8%,rgba(242,101,34,.13),transparent 26%),#10161a;border-top:2px solid var(--orange)}
+.footer::after{content:"";position:absolute;right:-110px;top:34px;width:360px;height:360px;border:1px solid rgba(255,255,255,.045);border-radius:50%;box-shadow:0 0 0 70px rgba(255,255,255,.018);pointer-events:none}
+.footer-lead{position:relative;z-index:1;grid-template-columns:minmax(180px,.75fr) 1.8fr auto;gap:44px;align-items:center;padding-bottom:56px}
+.footer-brand{width:max-content;padding:0;background:transparent;border-radius:0}
+.footer-brand .brand-logo{width:158px;height:78px}
+.footer h2{font-size:clamp(38px,4vw,62px);line-height:1.02;letter-spacing:-3px}
+.footer h2 em{font-family:Muller,sans-serif;font-style:normal}
+.footer-columns{position:relative;z-index:1;grid-template-columns:.75fr 1fr 1.15fr;gap:44px;margin:46px 0 52px}
+.footer-columns>div{gap:9px}
+.footer-label{font-size:11px;color:#777e82;margin-bottom:13px}
+.footer a,.footer p{font-size:13px;color:#b9bec0}
+.footer-phone{font-size:22px!important;line-height:1.25!important;color:#fff!important;letter-spacing:-.35px}
+.footer-bottom{position:relative;z-index:1;font-size:11px;color:#747b7e}
+.footer-bottom a{font-size:11px;color:#8d9497}
+
+@media(max-width:1100px){
+  .footer-lead{grid-template-columns:180px 1fr}
+  .footer-lead>.button{grid-column:2;margin-top:0}
+}
+
+@media(max-width:680px){
+  .footer{padding:52px var(--content-gutter) 20px}
+  .footer-lead{display:block;padding-bottom:42px}
+  .footer-brand .brand-logo{width:138px;height:68px}
+  .footer h2{margin:34px 0 28px;font-size:38px;line-height:1.04;letter-spacing:-2px}
+  .footer-lead>.button{width:100%;margin:0}
+  .footer-columns{grid-template-columns:1fr;gap:34px;margin:40px 0}
+  .footer-bottom{gap:14px;flex-direction:column}
+}
