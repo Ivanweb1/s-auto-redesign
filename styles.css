@@ -227,7 +227,7 @@ body{background:#fff}.page-shell{width:100%;margin:0;box-shadow:none}.conversion
   .footer-brand{margin-bottom:44px}
   .footer-brand .brand-logo{width:142px}
   .footer-nav-secondary{padding-top:83px}
-  .footer-identity{padding-right:16px}
+  .footer-identity{padding-right:16px;border-right:0}
   .footer-nav{gap:17px}
   .footer-nav a{font-size:11px;line-height:1.45;letter-spacing:.18px}
   .footer-nav a::before{display:none}
