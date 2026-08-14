@@ -157,7 +157,7 @@ body{background:#fff}.page-shell{width:100%;margin:0;box-shadow:none}.conversion
 }
 .footer-nav a:hover{color:var(--orange);transform:translateX(8px)}
 .footer-nav a:hover::before{opacity:1;transform:translateX(0)}
-.footer-nav-secondary{padding-top:4px}
+.footer-nav-secondary{padding-top:114px}
 .footer-contact{display:flex;flex-direction:column;align-items:flex-start;min-width:0}
 .footer-contact-row{
   display:flex;
@@ -213,7 +213,7 @@ body{background:#fff}.page-shell{width:100%;margin:0;box-shadow:none}.conversion
   .footer{padding-top:52px}
   .footer-grid{grid-template-columns:1fr 1fr;gap:48px 30px}
   .footer-identity{padding-right:22px;border-right:1px solid rgba(255,255,255,.1)}
-  .footer-nav-secondary{padding-top:2px}
+  .footer-nav-secondary{padding-top:114px}
   .footer-contact{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:0 30px;padding-top:36px;border-top:1px solid rgba(255,255,255,.12)}
   .footer-contact-row{grid-column:1}
   .footer-legal{grid-column:2;grid-row:1/5;margin:0;padding:0 0 0 30px;border-top:0;border-left:1px solid rgba(255,255,255,.12)}
@@ -226,6 +226,7 @@ body{background:#fff}.page-shell{width:100%;margin:0;box-shadow:none}.conversion
   .footer-grid{grid-template-columns:1fr 1fr;gap:40px 18px}
   .footer-brand{margin-bottom:34px}
   .footer-brand .brand-logo{width:142px}
+  .footer-nav-secondary{padding-top:94px}
   .footer-identity{padding-right:16px}
   .footer-nav{gap:17px}
   .footer-nav a{font-size:11px;line-height:1.45;letter-spacing:.18px}
