@@ -87,7 +87,6 @@ body{background:#fff}.page-shell{width:100%;margin:0;box-shadow:none}.conversion
   background:
     radial-gradient(circle at 88% 10%,rgba(242,101,34,.12),transparent 27%),
     linear-gradient(115deg,#141c21 0%,#0d1216 72%);
-  border-top:2px solid var(--orange);
   color:#fff;
 }
 .footer::before{
