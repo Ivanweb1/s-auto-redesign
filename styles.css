@@ -853,3 +853,19 @@ body{background:#fff}.page-shell{width:100%;margin:0;box-shadow:none}.conversion
 @media(prefers-reduced-motion:reduce){
   .condition-metric{transition:none}
 }
+
+/* Content readability rule: descriptive copy never drops below 14px */
+.conversion-hero .hero-copy>p,
+.catalog-preview-intro p,
+.catalog-market-note p,
+.process-heading p,
+.process-step p,
+.process-action p,
+.conditions-intro p,
+.condition-metric p,
+.condition-list li p,
+.condition-note p,
+.modal>p,
+.success p{
+  font-size:14px;
+}
