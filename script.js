@@ -107,3 +107,75 @@ document.querySelectorAll('.car-card[data-price]').forEach((card) => {
 
   updatePayment(24);
 });
+
+const portfolioSlider = document.querySelector('.portfolio-showcase');
+
+if (portfolioSlider) {
+  const portfolioCases = [
+    {
+      image: 'assets/portfolio-honda-stepwgn-clean.png',
+      title: 'Honda Stepwgn',
+      shortTitle: 'Honda Stepwgn · 2000',
+      meta: 'Минивэн · 2000 · передан клиенту',
+      alt: 'Клиент S-AUTO рядом с Honda Stepwgn 2000 года'
+    },
+    {
+      image: 'assets/portfolio-mazda-3-clean.png',
+      title: 'Mazda 3',
+      shortTitle: 'Mazda 3 · 2007',
+      meta: 'Седан · 2007 · передан клиенту',
+      alt: 'Клиент S-AUTO рядом с Mazda 3 2007 года'
+    },
+    {
+      image: 'assets/portfolio-prado-clean.png',
+      title: 'Toyota Land Cruiser Prado',
+      shortTitle: 'Toyota Prado · 2000',
+      meta: 'Внедорожник · 2000 · передан клиенту',
+      alt: 'Клиенты S-AUTO рядом с Toyota Land Cruiser Prado 2000 года'
+    }
+  ];
+
+  const mainImage = portfolioSlider.querySelector('[data-portfolio-main-image]');
+  const title = portfolioSlider.querySelector('[data-portfolio-title]');
+  const meta = portfolioSlider.querySelector('[data-portfolio-meta]');
+  const label = portfolioSlider.querySelector('[data-portfolio-label]');
+  const previousPreview = portfolioSlider.querySelector('.portfolio-preview-left');
+  const nextPreview = portfolioSlider.querySelector('.portfolio-preview-right');
+  const current = document.querySelector('[data-portfolio-current]');
+  let activePortfolioCase = 0;
+
+  function showPortfolioCase(index) {
+    activePortfolioCase = (index + portfolioCases.length) % portfolioCases.length;
+    const previousIndex = (activePortfolioCase - 1 + portfolioCases.length) % portfolioCases.length;
+    const nextIndex = (activePortfolioCase + 1) % portfolioCases.length;
+    const activeCase = portfolioCases[activePortfolioCase];
+    const previousCase = portfolioCases[previousIndex];
+    const nextCase = portfolioCases[nextIndex];
+
+    mainImage.src = activeCase.image;
+    mainImage.alt = activeCase.alt;
+    title.textContent = activeCase.title;
+    meta.textContent = activeCase.meta;
+    label.textContent = `Реальная сделка · ${String(activePortfolioCase + 1).padStart(2, '0')}`;
+    current.textContent = String(activePortfolioCase + 1).padStart(2, '0');
+
+    previousPreview.querySelector('img').src = previousCase.image;
+    previousPreview.querySelector('[data-portfolio-prev-title]').textContent = previousCase.shortTitle;
+    previousPreview.setAttribute('aria-label', `Показать предыдущий кейс: ${previousCase.title}`);
+    nextPreview.querySelector('img').src = nextCase.image;
+    nextPreview.querySelector('[data-portfolio-next-title]').textContent = nextCase.shortTitle;
+    nextPreview.setAttribute('aria-label', `Показать следующий кейс: ${nextCase.title}`);
+
+    portfolioSlider.classList.remove('is-updated');
+    window.requestAnimationFrame(() => portfolioSlider.classList.add('is-updated'));
+  }
+
+  document.querySelectorAll('[data-portfolio-prev]').forEach((button) => {
+    button.addEventListener('click', () => showPortfolioCase(activePortfolioCase - 1));
+  });
+  document.querySelectorAll('[data-portfolio-next]').forEach((button) => {
+    button.addEventListener('click', () => showPortfolioCase(activePortfolioCase + 1));
+  });
+
+  showPortfolioCase(0);
+}

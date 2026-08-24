@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="S-AUTO — автомобили в рассрочку и под выкуп в Красноярске без участия банков." />
     <title>S-AUTO — автомобиль в рассрочку</title>
-    <link rel="stylesheet" href="styles.css?v=20260824-portfolio-focus" />
+    <link rel="stylesheet" href="styles.css?v=20260824-portfolio-slider" />
   </head>
   <body>
     <div class="page-shell">
@@ -324,25 +324,30 @@
           </div>
 
           <div class="portfolio-showcase" aria-label="Примеры реальных сделок S-AUTO">
-            <div class="portfolio-preview portfolio-preview-left" aria-hidden="true">
-              <img src="assets/portfolio-mazda-3.jpg" alt="" loading="lazy" />
-              <span>Mazda 3 · 2007</span>
-            </div>
+            <button class="portfolio-preview portfolio-preview-left" type="button" data-portfolio-prev aria-label="Показать предыдущий кейс: Toyota Land Cruiser Prado">
+              <img src="assets/portfolio-prado-clean.png" alt="" loading="lazy" />
+              <span data-portfolio-prev-title>Toyota Prado · 2000</span>
+            </button>
 
-            <a class="portfolio-feature" href="https://s-auto.company/portfolio/" aria-label="Honda Stepwgn 2000 года — реальная сделка S-AUTO">
-              <img src="assets/portfolio-honda-stepwgn-clean.png" alt="Клиент S-AUTO рядом с Honda Stepwgn 2000 года" loading="lazy" />
+            <article class="portfolio-feature" aria-live="polite">
+              <img src="assets/portfolio-honda-stepwgn-clean.png" alt="Клиент S-AUTO рядом с Honda Stepwgn 2000 года" loading="lazy" data-portfolio-main-image />
               <div class="portfolio-feature-shade"></div>
               <div class="portfolio-feature-copy">
-                <span>Реальная сделка · 01</span>
-                <div><h3>Honda Stepwgn</h3><p>Минивэн · 2000 · передан клиенту</p></div>
-                <b>↗</b>
+                <span data-portfolio-label>Реальная сделка · 01</span>
+                <div><h3 data-portfolio-title>Honda Stepwgn</h3><p data-portfolio-meta>Минивэн · 2000 · передан клиенту</p></div>
               </div>
-            </a>
+            </article>
 
-            <div class="portfolio-preview portfolio-preview-right" aria-hidden="true">
-              <img src="assets/portfolio-prado.jpg" alt="" loading="lazy" />
-              <span>Toyota Prado · 2000</span>
-            </div>
+            <button class="portfolio-preview portfolio-preview-right" type="button" data-portfolio-next aria-label="Показать следующий кейс: Mazda 3">
+              <img src="assets/portfolio-mazda-3-clean.png" alt="" loading="lazy" />
+              <span data-portfolio-next-title>Mazda 3 · 2007</span>
+            </button>
+          </div>
+
+          <div class="portfolio-slider-controls" aria-label="Управление слайдером реальных сделок">
+            <button type="button" data-portfolio-prev aria-label="Предыдущий кейс">←</button>
+            <div><b data-portfolio-current>01</b><span>/ 03</span></div>
+            <button type="button" data-portfolio-next aria-label="Следующий кейс">→</button>
           </div>
 
           <div class="portfolio-proof">
