@@ -487,6 +487,7 @@ body{background:#fff}.page-shell{width:100%;margin:0;box-shadow:none}.conversion
 }
 .catalog-preview-grid .car-card .car-card-title span{
   margin-bottom:8px;
+  font-size:13px;
   color:#85827b;
 }
 .catalog-preview-grid .car-card .car-card-title h3{
@@ -510,6 +511,7 @@ body{background:#fff}.page-shell{width:100%;margin:0;box-shadow:none}.conversion
   margin-top:18px;
   padding-top:15px;
   border-color:rgba(23,23,22,.1);
+  font-size:13px;
   color:#85827b;
 }
 .catalog-preview-grid .car-card .car-card-meta b{color:#171716}
@@ -532,7 +534,7 @@ body{background:#fff}.page-shell{width:100%;margin:0;box-shadow:none}.conversion
   gap:14px;
 }
 .finance-term>span{
-  font-size:11px;
+  font-size:13px;
   color:#6f6d67;
 }
 .term-options{
@@ -550,7 +552,7 @@ body{background:#fff}.page-shell{width:100%;margin:0;box-shadow:none}.conversion
   border-radius:2px;
   background:transparent;
   color:#74716b;
-  font:500 11px Muller,sans-serif;
+  font:500 13px Muller,sans-serif;
   cursor:pointer;
   transition:background .2s ease,color .2s ease,box-shadow .2s ease;
 }
@@ -571,14 +573,14 @@ body{background:#fff}.page-shell{width:100%;margin:0;box-shadow:none}.conversion
   color:#fff;
 }
 .finance-payment>span{
-  font-size:11px;
+  font-size:13px;
   line-height:1.25;
 }
 .finance-payment small{
   display:block;
   margin-top:4px;
   color:#8d9599;
-  font-size:9px;
+  font-size:11px;
 }
 .finance-payment strong{
   flex:0 0 auto;
@@ -604,7 +606,7 @@ body{background:#fff}.page-shell{width:100%;margin:0;box-shadow:none}.conversion
   }
   .catalog-preview-grid .car-card:nth-child(n){width:100%}
   .catalog-preview-grid .car-card .car-card-title h3{min-height:0;font-size:24px}
-  .catalog-preview-grid .car-card .car-card-meta{font-size:11px}
+  .catalog-preview-grid .car-card .car-card-meta{font-size:13px}
   .finance-term{min-height:62px}
   .finance-payment strong{font-size:19px}
 }
