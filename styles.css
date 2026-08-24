@@ -542,3 +542,180 @@ body{background:#fff}.page-shell{width:100%;margin:0;box-shadow:none}.conversion
   .catalog-preview-grid .car-card-featured .car-card-image,
   .catalog-preview-grid .car-card:not(.car-card-featured) .car-card-image{aspect-ratio:16/10}
 }
+
+/* Modern catalog grid with an in-card installment calculator */
+.catalog-preview-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  grid-template-rows:none;
+  gap:18px;
+}
+.catalog-preview-grid .car-card:nth-child(n){
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  grid-column:auto;
+  grid-row:auto;
+  min-height:0;
+  overflow:hidden;
+  border:1px solid rgba(23,23,22,.11);
+  border-radius:5px;
+  background:#fbfaf7;
+  box-shadow:0 14px 38px rgba(18,20,19,.06);
+}
+.catalog-preview-grid .car-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 24px 55px rgba(18,20,19,.12);
+}
+.catalog-preview-grid .car-card .car-card-image{
+  position:relative;
+  inset:auto;
+  width:100%;
+  height:auto;
+  min-height:0;
+  aspect-ratio:16/10;
+}
+.catalog-preview-grid .car-card .car-card-image::after{content:none}
+.catalog-preview-grid .car-card .car-card-image img{object-fit:cover}
+.catalog-preview-grid .car-card .car-card-content{
+  position:relative;
+  z-index:2;
+  left:auto;
+  right:auto;
+  bottom:auto;
+  display:flex;
+  flex:1;
+  flex-direction:column;
+  padding:22px 22px 0;
+  pointer-events:auto;
+}
+.catalog-preview-grid .car-card .car-card-title{
+  display:block;
+}
+.catalog-preview-grid .car-card .car-card-title span{
+  margin-bottom:8px;
+  color:#85827b;
+}
+.catalog-preview-grid .car-card .car-card-title h3{
+  min-height:31px;
+  font-size:25px;
+  line-height:1.05;
+  letter-spacing:-.9px;
+  color:#171716;
+}
+.catalog-preview-grid .car-card .car-card-title strong{
+  display:block;
+  margin-top:15px;
+  font-size:19px;
+  color:#171716;
+}
+.catalog-preview-grid .car-card .car-card-meta{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  gap:12px;
+  margin-top:18px;
+  padding-top:15px;
+  border-color:rgba(23,23,22,.1);
+  color:#85827b;
+}
+.catalog-preview-grid .car-card .car-card-meta b{color:#171716}
+.catalog-preview-grid .car-card .car-card-arrow{
+  right:14px;
+  top:14px;
+  width:38px;
+  height:38px;
+  font-size:15px;
+}
+.car-card-finance{
+  margin-top:20px;
+  border-top:1px solid rgba(23,23,22,.11);
+}
+.finance-term{
+  min-height:64px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+}
+.finance-term>span{
+  font-size:11px;
+  color:#6f6d67;
+}
+.term-options{
+  display:flex;
+  padding:3px;
+  border:1px solid #d7d3ca;
+  border-radius:3px;
+  background:#f0eee8;
+}
+.term-options button{
+  min-width:38px;
+  height:30px;
+  padding:0 7px;
+  border:0;
+  border-radius:2px;
+  background:transparent;
+  color:#74716b;
+  font:500 11px Muller,sans-serif;
+  cursor:pointer;
+  transition:background .2s ease,color .2s ease,box-shadow .2s ease;
+}
+.term-options button:hover{color:#171716}
+.term-options button.is-active{
+  background:var(--orange);
+  color:#fff;
+  box-shadow:0 5px 12px rgba(242,101,34,.22);
+}
+.finance-payment{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  margin:0 -22px;
+  padding:17px 22px 18px;
+  background:#12191d;
+  color:#fff;
+}
+.finance-payment>span{
+  font-size:11px;
+  line-height:1.25;
+}
+.finance-payment small{
+  display:block;
+  margin-top:4px;
+  color:#8d9599;
+  font-size:9px;
+}
+.finance-payment strong{
+  flex:0 0 auto;
+  color:#fff;
+  font-size:20px;
+  font-weight:500;
+  letter-spacing:-.45px;
+}
+
+@media(max-width:1100px){
+  .catalog-preview-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+@media(max-width:760px){
+  .catalog-preview-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:14px;
+    margin-right:0;
+    padding-right:0;
+    padding-bottom:0;
+    overflow:visible;
+  }
+  .catalog-preview-grid .car-card:nth-child(n){width:100%}
+  .catalog-preview-grid .car-card .car-card-title h3{min-height:0;font-size:24px}
+  .catalog-preview-grid .car-card .car-card-meta{font-size:11px}
+  .finance-term{min-height:62px}
+  .finance-payment strong{font-size:19px}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .term-options button{transition:none}
+}

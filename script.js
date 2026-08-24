@@ -82,3 +82,28 @@ document.addEventListener('visibilitychange', () => document.hidden ? stopAutopl
 
 showSlide(0);
 startAutoplay();
+
+const moneyFormatter = new Intl.NumberFormat('ru-RU', { maximumFractionDigits: 0 });
+
+document.querySelectorAll('.car-card[data-price]').forEach((card) => {
+  const price = Number(card.dataset.price);
+  const downPayment = Number(card.dataset.downPayment);
+  const paymentOutput = card.querySelector('[data-payment]');
+  const termButtons = [...card.querySelectorAll('[data-term]')];
+
+  function updatePayment(term) {
+    const monthlyPayment = Math.ceil((price - downPayment) / term);
+    paymentOutput.textContent = `${moneyFormatter.format(monthlyPayment)} ₽`;
+    termButtons.forEach((button) => {
+      const active = Number(button.dataset.term) === term;
+      button.classList.toggle('is-active', active);
+      button.setAttribute('aria-pressed', String(active));
+    });
+  }
+
+  termButtons.forEach((button) => {
+    button.addEventListener('click', () => updatePayment(Number(button.dataset.term)));
+  });
+
+  updatePayment(24);
+});
