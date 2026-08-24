@@ -362,7 +362,7 @@ body{background:#fff}.page-shell{width:100%;margin:0;box-shadow:none}.conversion
   border-radius:50%;
   background:rgba(15,20,23,.88);
   color:#fff;
-  font-size:10px;
+  font-size:11px;
   letter-spacing:.6px;
   backdrop-filter:blur(8px);
 }
@@ -384,7 +384,7 @@ body{background:#fff}.page-shell{width:100%;margin:0;box-shadow:none}.conversion
 .car-card-content{padding:28px 30px 27px}
 .car-card-featured .car-card-content{padding:34px 36px 31px}
 .car-card-title{display:flex;align-items:flex-end;justify-content:space-between;gap:24px}
-.car-card-title span{display:block;margin-bottom:8px;font-size:10px;line-height:1;text-transform:uppercase;letter-spacing:1px;color:#8b8881}
+.car-card-title span{display:block;margin-bottom:8px;font-size:11px;line-height:1;text-transform:uppercase;letter-spacing:1px;color:#8b8881}
 .car-card-title h3{margin:0;font-size:clamp(23px,2.2vw,34px);font-weight:400;line-height:1;letter-spacing:-1.2px;color:#171716}
 .car-card-title strong{flex:0 0 auto;font-size:19px;font-weight:500;line-height:1;color:#171716}
 .car-card:not(.car-card-featured) .car-card-title{display:block}
