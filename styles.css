@@ -869,3 +869,107 @@ body{background:#fff}.page-shell{width:100%;margin:0;box-shadow:none}.conversion
 .success p{
   font-size:14px;
 }
+
+/* Real customer cars */
+.portfolio-section{
+  padding:clamp(82px,8vw,126px) var(--content-gutter) clamp(76px,7vw,108px);
+  background:#fbfaf7;
+  color:#171716;
+}
+.portfolio-heading{
+  display:grid;
+  grid-template-columns:minmax(0,1.4fr) minmax(320px,.6fr);
+  align-items:end;
+  gap:clamp(48px,8vw,132px);
+  max-width:1440px;
+  margin:0 auto clamp(48px,5vw,72px);
+}
+.portfolio-heading h2{
+  margin:0;
+  font-size:clamp(48px,5.6vw,86px);
+  font-weight:400;
+  line-height:.95;
+  letter-spacing:clamp(-5px,-.38vw,-2px);
+}
+.portfolio-heading h2 em{color:var(--orange);font-style:normal}
+.portfolio-intro{padding-bottom:4px}
+.portfolio-intro p{max-width:470px;margin:0 0 28px;color:#6f6d67;font-size:14px;line-height:1.7}
+.portfolio-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:16px;
+  max-width:1440px;
+  margin:0 auto;
+}
+.portfolio-card{
+  min-width:0;
+  overflow:hidden;
+  border:1px solid rgba(23,23,22,.12);
+  border-radius:4px;
+  background:#131a1e;
+  color:#fff;
+  text-decoration:none;
+  box-shadow:0 14px 36px rgba(18,20,19,.07);
+  transition:transform .3s ease,box-shadow .3s ease;
+}
+.portfolio-card:hover{transform:translateY(-5px);box-shadow:0 24px 55px rgba(18,20,19,.14)}
+.portfolio-image{position:relative;aspect-ratio:16/9;overflow:hidden;background:#dedbd4}
+.portfolio-image::after{content:"";position:absolute;inset:55% 0 0;background:linear-gradient(transparent,rgba(10,14,17,.28));pointer-events:none}
+.portfolio-image img{width:100%;height:100%;object-fit:cover;object-position:center 49%;transition:transform .55s ease}
+.portfolio-card:hover .portfolio-image img{transform:scale(1.045)}
+.portfolio-image>span{
+  position:absolute;
+  z-index:1;
+  left:14px;
+  bottom:14px;
+  padding:8px 10px;
+  border-radius:2px;
+  background:rgba(16,22,26,.88);
+  color:#fff;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.65px;
+  backdrop-filter:blur(8px);
+}
+.portfolio-card-copy{display:flex;align-items:center;justify-content:space-between;gap:15px;min-height:102px;padding:18px 18px 19px}
+.portfolio-card-copy small{display:block;margin-bottom:7px;color:#8f979b;font-size:12px;text-transform:uppercase;letter-spacing:.65px}
+.portfolio-card-copy h3{margin:0;color:#fff;font-size:20px;font-weight:400;line-height:1.15;letter-spacing:-.45px}
+.portfolio-card-copy>b{display:grid;place-items:center;flex:0 0 auto;width:36px;height:36px;border:1px solid rgba(255,255,255,.2);border-radius:50%;color:var(--orange);font-size:14px;font-weight:400;transition:background .25s ease,color .25s ease}
+.portfolio-card:hover .portfolio-card-copy>b{background:var(--orange);color:#fff}
+.portfolio-proof{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:34px;
+  max-width:1440px;
+  margin:18px auto 0;
+  padding:25px 28px;
+  border:1px solid rgba(23,23,22,.12);
+  background:#f0ede6;
+}
+.portfolio-proof p{display:flex;align-items:baseline;gap:15px;margin:0;font-size:14px;line-height:1.55}
+.portfolio-proof p strong{font-weight:500;color:#171716}
+.portfolio-proof p span{color:#706d67}
+
+@media(max-width:1050px){
+  .portfolio-heading{grid-template-columns:1.15fr .85fr;gap:48px}
+  .portfolio-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .portfolio-image{aspect-ratio:16/9}
+}
+
+@media(max-width:680px){
+  .portfolio-section{padding:72px var(--content-gutter) 64px}
+  .portfolio-heading{display:block;margin-bottom:40px}
+  .portfolio-heading h2{font-size:43px;letter-spacing:-2.5px}
+  .portfolio-intro{margin-top:24px;padding:0}
+  .portfolio-grid{grid-template-columns:1fr;gap:14px}
+  .portfolio-image{aspect-ratio:16/9}
+  .portfolio-card-copy{min-height:94px}
+  .portfolio-proof{align-items:flex-start;flex-direction:column;padding:22px 20px}
+  .portfolio-proof p{align-items:flex-start;flex-direction:column;gap:6px}
+  .portfolio-proof .button{width:100%}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .portfolio-card,.portfolio-image img,.portfolio-card-copy>b{transition:none}
+}
