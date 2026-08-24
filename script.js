@@ -186,3 +186,13 @@ document.querySelectorAll('.faq-item').forEach((item) => {
     });
   });
 });
+
+const carChoiceForm = document.querySelector('#car-choice-form');
+
+if (carChoiceForm) {
+  carChoiceForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    carChoiceForm.querySelector('.portfolio-lead-form-body').hidden = true;
+    carChoiceForm.querySelector('.portfolio-lead-success').hidden = false;
+  });
+}

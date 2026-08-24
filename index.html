@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="S-AUTO — автомобили в рассрочку и под выкуп в Красноярске без участия банков." />
     <title>S-AUTO — автомобиль в рассрочку</title>
-    <link rel="stylesheet" href="styles.css?v=20260824-contact" />
+    <link rel="stylesheet" href="styles.css?v=20260824-portfolio-form" />
   </head>
   <body>
     <div class="page-shell">
@@ -349,9 +349,42 @@
             <button type="button" data-portfolio-next aria-label="Следующий кейс">→</button>
           </div>
 
-          <div class="portfolio-proof">
-            <p><strong>Не ограничиваем выбор каталогом</strong><span>Автомобиль можно найти у частного продавца, в салоне или на любой популярной площадке.</span></p>
-            <button class="button js-open-modal" type="button">Подобрать автомобиль <span>↗</span></button>
+          <div class="portfolio-lead">
+            <div class="portfolio-lead-visual">
+              <img src="assets/s-auto-choice-lineup.png" alt="Большой выбор автомобилей на площадке в Красноярске" loading="lazy" />
+              <div class="portfolio-lead-shade"></div>
+              <div class="portfolio-lead-caption">
+                <span>Выбор без ограничений</span>
+                <h3>Вы выбираете.<br />Мы проверяем и выкупаем</h3>
+                <p>Каталог S-AUTO, автосалон, частный продавец или любая популярная площадка.</p>
+              </div>
+            </div>
+
+            <form class="portfolio-lead-form" id="car-choice-form">
+              <div class="portfolio-lead-form-body">
+                <span class="portfolio-lead-form-kicker">Заявка на подбор</span>
+                <h3>Расскажите,<br />какой автомобиль нужен</h3>
+                <div class="portfolio-form-grid">
+                  <label><span>Ваше имя</span><input type="text" name="name" placeholder="Иван" autocomplete="name" required /></label>
+                  <label><span>Телефон</span><input type="tel" name="phone" placeholder="+7 999 000-00-00" autocomplete="tel" required /></label>
+                  <label class="portfolio-form-wide"><span>Ссылка на автомобиль или пожелания</span><input type="text" name="car" placeholder="Вставьте ссылку или напишите марку и модель" required /></label>
+                </div>
+                <fieldset class="portfolio-contact-choice">
+                  <legend>Как удобнее связаться?</legend>
+                  <label><input type="radio" name="contact-method" value="phone" checked /><span>Позвонить</span></label>
+                  <label><input type="radio" name="contact-method" value="whatsapp" /><span>WhatsApp</span></label>
+                </fieldset>
+                <div class="portfolio-form-submit">
+                  <button class="button" type="submit">Отправить заявку <span>↗</span></button>
+                  <label class="portfolio-consent"><input type="checkbox" required /><span>Согласен на обработку персональных данных</span></label>
+                </div>
+              </div>
+              <div class="portfolio-lead-success" hidden>
+                <span>Заявка отправлена</span>
+                <strong>Свяжемся с вами в рабочее время</strong>
+                <p>Менеджер уточнит детали и предложит следующие шаги.</p>
+              </div>
+            </form>
           </div>
         </section>
 
