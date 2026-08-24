@@ -138,7 +138,6 @@ if (portfolioSlider) {
   const mainImage = portfolioSlider.querySelector('[data-portfolio-main-image]');
   const title = portfolioSlider.querySelector('[data-portfolio-title]');
   const meta = portfolioSlider.querySelector('[data-portfolio-meta]');
-  const label = portfolioSlider.querySelector('[data-portfolio-label]');
   const previousPreview = portfolioSlider.querySelector('.portfolio-preview-left');
   const nextPreview = portfolioSlider.querySelector('.portfolio-preview-right');
   const current = document.querySelector('[data-portfolio-current]');
@@ -156,7 +155,6 @@ if (portfolioSlider) {
     mainImage.alt = activeCase.alt;
     title.textContent = activeCase.title;
     meta.textContent = activeCase.meta;
-    label.textContent = `Реальная сделка · ${String(activePortfolioCase + 1).padStart(2, '0')}`;
     current.textContent = String(activePortfolioCase + 1).padStart(2, '0');
 
     previousPreview.querySelector('img').src = previousCase.image;

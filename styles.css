@@ -1003,10 +1003,8 @@ body{background:#fff}.page-shell{width:100%;margin:0;box-shadow:none}.conversion
   display:grid;
   grid-template-columns:1fr;
   align-items:end;
-  gap:10px 28px;
   padding:30px 32px 29px;
 }
-.portfolio-feature-copy>span{color:rgba(255,255,255,.68);font-size:12px;text-transform:uppercase;letter-spacing:.8px}
 .portfolio-feature-copy h3{margin:0;color:#fff;font-size:clamp(30px,3vw,46px);font-weight:400;line-height:1;letter-spacing:-1.5px}
 .portfolio-feature-copy p{margin:9px 0 0;color:#bec4c7;font-size:14px;line-height:1.4}
 .portfolio-preview{
