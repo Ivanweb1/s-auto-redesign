@@ -1103,10 +1103,11 @@ body{background:#fff}.page-shell{width:100%;margin:0;box-shadow:none}.conversion
 @media(max-width:680px){
   .portfolio-showcase{display:block;overflow:visible}
   .portfolio-preview{display:none}
-  .portfolio-feature{aspect-ratio:4/5}
-  .portfolio-feature>img{object-position:52% center}
-  .portfolio-feature-copy{padding:24px 20px 22px}
-  .portfolio-feature-copy h3{font-size:32px;letter-spacing:-1px}
+  .portfolio-feature{aspect-ratio:16/9}
+  .portfolio-feature>img{object-position:center}
+  .portfolio-feature-copy{padding:18px 18px 16px}
+  .portfolio-feature-copy h3{font-size:27px;letter-spacing:-.8px}
+  .portfolio-feature-copy p{margin-top:6px}
 }
 
 @media(prefers-reduced-motion:reduce){
