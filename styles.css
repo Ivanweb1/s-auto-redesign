@@ -995,7 +995,8 @@ body{background:#fff}.page-shell{width:100%;margin:0;box-shadow:none}.conversion
   .portfolio-image{aspect-ratio:16/9}
   .portfolio-card-copy{min-height:94px}
   .portfolio-lead{margin-top:48px}
-  .portfolio-lead-visual{min-height:430px}
+  .portfolio-lead-visual{min-height:0;padding-top:75%;padding-bottom:255px}
+  .portfolio-lead-visual>img{position:absolute;top:0;left:0;width:100%;height:auto;object-position:center top;mask-image:linear-gradient(#000 68%,transparent)}
   .portfolio-lead-caption{left:22px;right:22px;bottom:24px}
   .portfolio-lead-caption h3{font-size:33px;letter-spacing:-1.6px}
   .portfolio-lead-form{padding:38px 22px 40px}
@@ -1113,6 +1114,22 @@ body{background:#fff}.page-shell{width:100%;margin:0;box-shadow:none}.conversion
 @media(prefers-reduced-motion:reduce){
   .portfolio-feature>img,.portfolio-preview{transition:none}
   .portfolio-showcase.is-updated .portfolio-feature>img{animation:none}
+}
+
+/* Optional portrait-photo concept: ?cases=portrait.
+   Existing landscape photos are cropped for this layout preview only. */
+.portfolio-showcase-portrait{grid-template-columns:minmax(0,270px) minmax(0,420px) minmax(0,270px);justify-content:center;gap:32px;max-width:1120px;overflow:visible}
+.portfolio-showcase-portrait .portfolio-feature{aspect-ratio:auto;min-width:0;box-shadow:0 18px 45px rgba(18,20,19,.12)}
+.portfolio-showcase-portrait .portfolio-feature>img{display:block;aspect-ratio:3/4;width:100%;height:auto;object-fit:cover;transform:none;animation:none}
+.portfolio-showcase-portrait .portfolio-feature-shade{display:none}
+.portfolio-showcase-portrait .portfolio-feature-copy{position:static;padding:24px 26px 26px}
+.portfolio-showcase-portrait .portfolio-feature-copy h3{font-size:clamp(25px,2.4vw,34px);line-height:1.1;letter-spacing:-1px}
+.portfolio-showcase-portrait .portfolio-feature-copy p{font-size:14px;line-height:1.5}
+.portfolio-showcase-portrait .portfolio-preview{aspect-ratio:3/4;transform:none}
+.portfolio-showcase-portrait .portfolio-preview img{transform:none}
+@media(max-width:680px){
+  .portfolio-showcase-portrait{display:block;max-width:380px}
+  .portfolio-showcase-portrait .portfolio-feature-copy{padding:21px 20px 23px}
 }
 
 /* FAQ */

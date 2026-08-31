@@ -141,6 +141,9 @@ if (portfolioSlider) {
   const previousPreview = portfolioSlider.querySelector('.portfolio-preview-left');
   const nextPreview = portfolioSlider.querySelector('.portfolio-preview-right');
   const current = document.querySelector('[data-portfolio-current]');
+  // An opt-in review URL preserves the approved slider at the default URL.
+  const portraitCases = new URLSearchParams(window.location.search).get('cases') === 'portrait';
+  portfolioSlider.classList.toggle('portfolio-showcase-portrait', portraitCases);
   let activePortfolioCase = 0;
 
   function showPortfolioCase(index) {
