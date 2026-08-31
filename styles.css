@@ -1119,19 +1119,26 @@ body{background:#fff}.page-shell{width:100%;margin:0;box-shadow:none}.conversion
 /* Optional portrait-photo concept: ?cases=portrait.
    Existing landscape photos are cropped for this layout preview only. */
 .portfolio-showcase-portrait{grid-template-columns:minmax(0,.75fr) minmax(0,1fr) minmax(0,2.2fr) minmax(0,1fr) minmax(0,.75fr);justify-content:center;gap:clamp(12px,1.5vw,28px);max-width:none;overflow:visible}
-.portfolio-showcase-portrait .portfolio-feature{aspect-ratio:auto;min-width:0;box-shadow:0 18px 45px rgba(18,20,19,.12)}
-.portfolio-showcase-portrait .portfolio-feature>img{display:block;aspect-ratio:4/3;width:100%;height:auto;object-fit:cover;transform:none;animation:none}
+.portfolio-showcase-portrait .portfolio-feature{grid-column:3;grid-row:1;aspect-ratio:auto;min-width:0;box-shadow:0 18px 45px rgba(18,20,19,.12)}
+.portfolio-showcase-portrait .portfolio-feature>img{display:block;aspect-ratio:3/4;width:100%;height:auto;object-fit:cover;transform:none;animation:none}
 .portfolio-showcase-portrait .portfolio-feature-shade{display:none}
 .portfolio-showcase-portrait .portfolio-feature-copy{position:static;padding:24px 26px 26px}
 .portfolio-showcase-portrait .portfolio-feature-copy h3{font-size:clamp(25px,2.4vw,34px);line-height:1.1;letter-spacing:-1px}
 .portfolio-showcase-portrait .portfolio-feature-copy p{font-size:14px;line-height:1.5}
 .portfolio-showcase-portrait .portfolio-preview{aspect-ratio:3/4;transform:none}
 .portfolio-showcase-portrait .portfolio-preview img{transform:none}
+.portfolio-showcase-portrait .portfolio-preview-left{grid-column:2;grid-row:1}
+.portfolio-showcase-portrait .portfolio-preview-right{grid-column:4;grid-row:1}
+.portfolio-showcase-portrait .portfolio-preview-left.portfolio-preview-outer{grid-column:1}
+.portfolio-showcase-portrait .portfolio-preview-right.portfolio-preview-outer{grid-column:5}
 .portfolio-showcase-portrait .portfolio-preview-outer{opacity:.35}
 .portfolio-showcase-portrait .portfolio-preview-outer:hover{opacity:.7}
 @media(min-width:681px) and (max-width:1050px){
   .portfolio-showcase-portrait{grid-template-columns:minmax(0,1fr) minmax(0,2.2fr) minmax(0,1fr)}
   .portfolio-showcase-portrait .portfolio-preview-outer{display:none}
+  .portfolio-showcase-portrait .portfolio-feature{grid-column:2}
+  .portfolio-showcase-portrait .portfolio-preview-left{grid-column:1}
+  .portfolio-showcase-portrait .portfolio-preview-right{grid-column:3}
 }
 @media(max-width:680px){
   .portfolio-showcase-portrait{display:block;max-width:380px}
