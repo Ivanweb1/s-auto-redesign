@@ -144,6 +144,19 @@ if (portfolioSlider) {
   // An opt-in review URL preserves the approved slider at the default URL.
   const portraitCases = new URLSearchParams(window.location.search).get('cases') === 'portrait';
   portfolioSlider.classList.toggle('portfolio-showcase-portrait', portraitCases);
+  const outerPreviews = [];
+  if (portraitCases) {
+    [-2, 2].forEach((offset) => {
+      const preview = (offset < 0 ? previousPreview : nextPreview).cloneNode(true);
+      preview.classList.add('portfolio-preview-outer');
+      preview.removeAttribute('data-portfolio-prev');
+      preview.removeAttribute('data-portfolio-next');
+      preview.addEventListener('click', () => showPortfolioCase(activePortfolioCase + offset));
+      if (offset < 0) portfolioSlider.prepend(preview);
+      else portfolioSlider.append(preview);
+      outerPreviews.push({ preview, offset });
+    });
+  }
   let activePortfolioCase = 0;
 
   function showPortfolioCase(index) {
@@ -166,6 +179,12 @@ if (portfolioSlider) {
     nextPreview.querySelector('img').src = nextCase.image;
     nextPreview.querySelector('[data-portfolio-next-title]').textContent = nextCase.shortTitle;
     nextPreview.setAttribute('aria-label', `Показать следующий кейс: ${nextCase.title}`);
+    outerPreviews.forEach(({ preview, offset }) => {
+      const previewCase = portfolioCases[(activePortfolioCase + offset + portfolioCases.length) % portfolioCases.length];
+      preview.querySelector('img').src = previewCase.image;
+      preview.querySelector('span').textContent = previewCase.shortTitle;
+      preview.setAttribute('aria-label', `Показать кейс: ${previewCase.title}`);
+    });
 
     portfolioSlider.classList.remove('is-updated');
     window.requestAnimationFrame(() => portfolioSlider.classList.add('is-updated'));
