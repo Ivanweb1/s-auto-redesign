@@ -35,11 +35,16 @@
   border-top:1px solid var(--line);
   border-bottom:1px solid var(--line);
 }
-.vehicle-quick-specs>div{padding:13px 12px;border-right:1px solid var(--line)}
-.vehicle-quick-specs>div:first-child{padding-left:0}
-.vehicle-quick-specs>div:last-child{padding-right:0;border-right:0}
+.vehicle-quick-specs>div{padding:11px 12px;border-right:1px solid var(--line)}
+.vehicle-quick-specs>div:nth-child(-n+4){border-bottom:1px solid var(--line)}
+.vehicle-quick-specs>div:nth-child(4n+1){padding-left:0}
+.vehicle-quick-specs>div:nth-child(4n){padding-right:0;border-right:0}
 .vehicle-quick-specs dt{font-size:7px;line-height:1.2;letter-spacing:1px;text-transform:uppercase;color:#99958d}
 .vehicle-quick-specs dd{margin:6px 0 0;font-size:11px;line-height:1.25;white-space:nowrap}
+.vehicle-conditions,.vehicle-story,.detail-contact{
+  padding-left:var(--content-gutter);
+  padding-right:var(--content-gutter);
+}
 
 @media(min-width:1101px){
   .vehicle-hero{
@@ -54,31 +59,43 @@
     flex:1 1 auto;
     min-height:0;
     grid-template-columns:minmax(0,1.08fr) minmax(430px,.92fr);
+    overflow:hidden;
   }
   .vehicle-visual{min-height:0}
-  .vehicle-summary{padding:30px clamp(28px,3vw,48px) 24px}
+  .vehicle-summary{min-height:0;padding:24px clamp(28px,3vw,48px) 18px}
   .vehicle-summary h1{
-    font-size:clamp(48px,4.25vw,68px);
+    font-size:clamp(46px,3.9vw,62px);
     line-height:.92;
-    letter-spacing:-3.4px;
-    margin:24px 0 16px;
+    letter-spacing:-3.1px;
+    margin:18px 0 10px;
   }
-  .vehicle-lead{font-size:12px;line-height:1.55;margin-bottom:12px}
-  .vehicle-quick-specs{margin-bottom:10px}
-  .vehicle-quick-specs>div{padding-top:10px;padding-bottom:10px}
-  .vehicle-price{padding:12px 0}
+  .vehicle-lead{font-size:11px;line-height:1.45;margin-bottom:8px}
+  .vehicle-quick-specs{margin-bottom:8px}
+  .vehicle-quick-specs>div{padding-top:7px;padding-bottom:7px}
+  .vehicle-quick-specs dd{margin-top:4px;font-size:10px}
+  .vehicle-price{padding:9px 0}
   .vehicle-price strong{font-size:23px}
-  .finance-box{margin-top:16px;padding:18px 22px 17px}
+  .finance-box{
+    margin-top:12px;
+    padding:15px 18px;
+    display:grid;
+    grid-template-columns:minmax(0,1.25fr) minmax(180px,.75fr);
+    grid-template-rows:auto auto auto;
+    gap:10px 18px;
+  }
+  .finance-heading{grid-column:1/-1;grid-row:1}
   .finance-heading h2{font-size:19px;margin-top:4px}
   .finance-heading>span{padding:6px 8px}
-  .term-picker{margin-top:13px}
+  .term-picker{grid-column:1;grid-row:2;margin-top:0}
   .term-picker button{padding:9px 7px}
-  .payment-control{margin-top:15px}
-  .payment-control input{margin-top:13px}
-  .monthly-payment{margin-top:12px;padding-top:12px}
+  .payment-control{grid-column:1;grid-row:3;margin-top:0}
+  .payment-control input{margin-top:10px}
+  .monthly-payment{grid-column:2;grid-row:2;margin:0;padding:0;border-top:0;align-self:center}
+  .monthly-payment>span{grid-column:1/-1}
+  .monthly-payment strong{grid-column:1/-1;margin-top:5px}
   .monthly-payment strong{font-size:24px}
-  .finance-action{margin-top:14px;padding-top:14px;padding-bottom:14px}
-  .summary-note{margin-top:10px}
+  .finance-action{grid-column:2;grid-row:3;margin-top:0;padding:12px 10px;gap:12px}
+  .summary-note{margin-top:7px}
 
   .vehicle-specs{
     padding:72px var(--content-gutter);
@@ -103,6 +120,7 @@
 
   .vehicle-story{padding-left:var(--content-gutter);padding-right:var(--content-gutter)}
   .vehicle-story h2{font-size:clamp(38px,3.5vw,54px)}
+  .detail-contact{padding-left:var(--content-gutter);padding-right:var(--content-gutter)}
 }
 
 @media(max-width:1100px){
@@ -115,6 +133,7 @@
   .vehicle-quick-specs>div{padding:12px 0;border-right:0;border-bottom:1px solid var(--line)}
   .vehicle-quick-specs>div:nth-child(odd){padding-right:12px;border-right:1px solid var(--line)}
   .vehicle-quick-specs>div:nth-child(even){padding-left:12px}
+  .vehicle-quick-specs>div:nth-child(-n+6){border-bottom:1px solid var(--line)}
   .vehicle-quick-specs>div:nth-last-child(-n+2){border-bottom:0}
   .vehicle-story{grid-template-columns:1fr;padding:62px 22px;gap:34px}
   .story-copy{border-left:0;border-top:1px solid var(--line);padding:26px 0 0}
