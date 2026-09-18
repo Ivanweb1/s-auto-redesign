@@ -2,3 +2,120 @@
 @media(max-width:1100px){.vehicle-layout{grid-template-columns:1fr;min-height:0}.vehicle-visual{min-height:760px}.vehicle-summary{padding:50px}.vehicle-summary h1{margin-top:40px}.vehicle-specs{grid-template-columns:1fr;gap:55px}.vehicle-conditions{gap:5vw}.vehicle-story{grid-template-columns:.2fr 1fr}.story-copy{grid-column:2}}
 @media(max-width:680px){.vehicle-hero{padding:18px 0 0}.breadcrumbs{padding:0 20px;margin-bottom:18px;overflow:auto;white-space:nowrap}.vehicle-visual{min-height:590px}.vehicle-image-topline{left:20px;right:20px}.vehicle-image-caption{left:22px;bottom:24px}.vehicle-summary{padding:34px 22px}.vehicle-summary h1{font-size:50px;letter-spacing:-3px;margin:34px 0 20px}.vehicle-price{align-items:start;flex-direction:column}.finance-box{margin-left:-22px;margin-right:-22px;padding:28px 22px}.vehicle-specs{padding:80px 22px}.specs-grid{grid-template-columns:1fr}.specs-grid>div{min-height:110px;border-right:0}.specs-grid>div:nth-last-child(-n+2){border-bottom:0}.specs-grid>div:last-child{border-bottom:1px solid var(--line)}.vehicle-conditions{padding:80px 22px;grid-template-columns:1fr;gap:56px}.vehicle-story{padding:76px 22px;grid-template-columns:1fr}.story-number{writing-mode:initial}.story-copy{grid-column:auto;border-left:0;border-top:1px solid var(--line);padding:30px 0 0}.detail-contact{padding:72px 22px;grid-template-columns:1fr;gap:38px}.detail-contact h2{font-size:50px;letter-spacing:-2.7px}}
 @media(prefers-reduced-motion:reduce){.vehicle-visual>img{transition:none}}
+
+/* Product page layout refinement */
+.condition-list{
+  background:transparent;
+  border:0;
+  border-top:1px solid rgba(255,255,255,.13);
+  color:#fff;
+}
+.condition-list li{
+  min-height:0;
+  align-items:start;
+  border-color:rgba(255,255,255,.13);
+}
+.condition-list li strong{color:#fff}
+.condition-list li p{color:#85837d}
+
+.vehicle-story{
+  min-height:0;
+  grid-template-columns:minmax(280px,.82fr) minmax(380px,1fr);
+  gap:clamp(56px,7vw,120px);
+  padding-top:74px;
+  padding-bottom:74px;
+  align-items:center;
+}
+.vehicle-story h2{max-width:560px}
+.story-copy{padding-left:clamp(30px,3vw,48px)}
+.vehicle-quick-specs{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  margin:0 0 16px;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.vehicle-quick-specs>div{padding:13px 12px;border-right:1px solid var(--line)}
+.vehicle-quick-specs>div:first-child{padding-left:0}
+.vehicle-quick-specs>div:last-child{padding-right:0;border-right:0}
+.vehicle-quick-specs dt{font-size:7px;line-height:1.2;letter-spacing:1px;text-transform:uppercase;color:#99958d}
+.vehicle-quick-specs dd{margin:6px 0 0;font-size:11px;line-height:1.25;white-space:nowrap}
+
+@media(min-width:1101px){
+  .vehicle-hero{
+    height:calc(100svh - 126px);
+    min-height:690px;
+    padding:18px var(--content-gutter) 28px;
+    display:flex;
+    flex-direction:column;
+  }
+  .breadcrumbs{flex:0 0 auto;margin-bottom:18px}
+  .vehicle-layout{
+    flex:1 1 auto;
+    min-height:0;
+    grid-template-columns:minmax(0,1.08fr) minmax(430px,.92fr);
+  }
+  .vehicle-visual{min-height:0}
+  .vehicle-summary{padding:30px clamp(28px,3vw,48px) 24px}
+  .vehicle-summary h1{
+    font-size:clamp(48px,4.25vw,68px);
+    line-height:.92;
+    letter-spacing:-3.4px;
+    margin:24px 0 16px;
+  }
+  .vehicle-lead{font-size:12px;line-height:1.55;margin-bottom:12px}
+  .vehicle-quick-specs{margin-bottom:10px}
+  .vehicle-quick-specs>div{padding-top:10px;padding-bottom:10px}
+  .vehicle-price{padding:12px 0}
+  .vehicle-price strong{font-size:23px}
+  .finance-box{margin-top:16px;padding:18px 22px 17px}
+  .finance-heading h2{font-size:19px;margin-top:4px}
+  .finance-heading>span{padding:6px 8px}
+  .term-picker{margin-top:13px}
+  .term-picker button{padding:9px 7px}
+  .payment-control{margin-top:15px}
+  .payment-control input{margin-top:13px}
+  .monthly-payment{margin-top:12px;padding-top:12px}
+  .monthly-payment strong{font-size:24px}
+  .finance-action{margin-top:14px;padding-top:14px;padding-bottom:14px}
+  .summary-note{margin-top:10px}
+
+  .vehicle-specs{
+    padding:72px var(--content-gutter);
+    grid-template-columns:minmax(320px,.7fr) minmax(540px,1fr);
+    gap:clamp(48px,6vw,96px);
+  }
+  .section-index{right:var(--content-gutter);top:28px}
+  .specs-heading h2{font-size:clamp(42px,3.8vw,58px)}
+  .specs-heading>p{margin-top:20px;line-height:1.65}
+  .specs-grid>div{min-height:102px;padding:20px 22px}
+  .specs-grid dd{margin-top:15px;font-size:20px}
+
+  .vehicle-conditions{
+    padding:74px var(--content-gutter);
+    gap:clamp(56px,6vw,100px);
+  }
+  .conditions-copy h2{font-size:clamp(42px,4vw,60px)}
+  .conditions-copy>p{margin:22px 0 26px;font-size:13px;line-height:1.65}
+  .condition-list li{grid-template-columns:36px 1fr;gap:12px;padding:17px 0}
+  .condition-list strong{font-size:15px}
+  .condition-list p{margin-top:5px}
+
+  .vehicle-story{padding-left:var(--content-gutter);padding-right:var(--content-gutter)}
+  .vehicle-story h2{font-size:clamp(38px,3.5vw,54px)}
+}
+
+@media(max-width:1100px){
+  .vehicle-story{grid-template-columns:1fr 1fr;padding:68px var(--content-gutter)}
+  .story-copy{grid-column:auto}
+}
+
+@media(max-width:680px){
+  .vehicle-quick-specs{grid-template-columns:1fr 1fr;margin-bottom:18px}
+  .vehicle-quick-specs>div{padding:12px 0;border-right:0;border-bottom:1px solid var(--line)}
+  .vehicle-quick-specs>div:nth-child(odd){padding-right:12px;border-right:1px solid var(--line)}
+  .vehicle-quick-specs>div:nth-child(even){padding-left:12px}
+  .vehicle-quick-specs>div:nth-last-child(-n+2){border-bottom:0}
+  .vehicle-story{grid-template-columns:1fr;padding:62px 22px;gap:34px}
+  .story-copy{border-left:0;border-top:1px solid var(--line);padding:26px 0 0}
+}
