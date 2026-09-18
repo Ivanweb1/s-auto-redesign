@@ -79,22 +79,25 @@
     margin-top:12px;
     padding:15px 18px;
     display:grid;
-    grid-template-columns:minmax(0,1.2fr) minmax(205px,.8fr);
+    grid-template-columns:minmax(0,1.15fr) minmax(215px,.85fr);
     grid-template-rows:auto auto auto;
     gap:10px 18px;
   }
   .finance-heading{grid-column:1/-1;grid-row:1}
-  .finance-heading h2{font-size:19px;margin-top:4px}
-  .finance-heading>span{padding:6px 8px}
+  .finance-heading h2{font-size:19px;margin-top:3px}
+  .finance-heading>span{padding:6px 9px;font-size:10px}
+  .finance-heading div>span{font-size:10px}
   .term-picker{grid-column:1;grid-row:2;margin-top:0}
-  .term-picker button{padding:9px 7px}
+  .term-picker button{padding:10px 7px;font-size:11px}
   .payment-control{grid-column:1;grid-row:3;margin-top:0}
-  .payment-control input{margin-top:10px}
+  .payment-control b{font-size:10px}
+  .payment-control input{margin-top:9px}
+  .payment-control small{font-size:10px}
   .monthly-payment{grid-column:2;grid-row:2;margin:0;padding:0;border-top:0;align-self:center}
-  .monthly-payment>span{grid-column:1/-1}
+  .monthly-payment>span{grid-column:1/-1;font-size:10px}
   .monthly-payment strong{grid-column:1/-1;margin-top:5px}
   .monthly-payment strong{font-size:24px}
-  .finance-action{grid-column:2;grid-row:3;margin-top:0;padding:12px 8px;gap:6px;white-space:nowrap;letter-spacing:.7px}
+  .finance-action{grid-column:2;grid-row:3;margin-top:0;padding:12px 10px;gap:8px;white-space:nowrap;font-size:11px;letter-spacing:.8px}
   .finance-action span{flex:0 0 auto}
   .summary-note{margin-top:7px}
 
@@ -140,41 +143,17 @@
   .story-copy{border-left:0;border-top:1px solid var(--line);padding:26px 0 0}
 }
 
-/* Minimum readable type size for the complete vehicle detail page */
-.vehicle-detail-page .utility-bar,
-.vehicle-detail-page .header-main>.nav>a,
+/* Mixed-case text stays at least 13px; compact uppercase labels may be smaller. */
 .vehicle-detail-page .mobile-nav-info p,
-.vehicle-detail-page .mobile-nav-info p span,
-.vehicle-detail-page .phone span,
-.vehicle-detail-page .button,
-.vehicle-detail-page .breadcrumbs,
-.vehicle-detail-page .vehicle-image-topline,
-.vehicle-detail-page .vehicle-image-caption span,
-.vehicle-detail-page .vehicle-kicker,
 .vehicle-detail-page .vehicle-lead,
-.vehicle-detail-page .vehicle-quick-specs dt,
 .vehicle-detail-page .vehicle-quick-specs dd,
-.vehicle-detail-page .vehicle-price span,
-.vehicle-detail-page .finance-heading>span,
-.vehicle-detail-page .finance-heading div>span,
-.vehicle-detail-page .term-picker button,
-.vehicle-detail-page .payment-control b,
 .vehicle-detail-page .payment-control output,
-.vehicle-detail-page .payment-control small,
-.vehicle-detail-page .monthly-payment>span,
 .vehicle-detail-page .monthly-payment small,
 .vehicle-detail-page .summary-note,
-.vehicle-detail-page .eyebrow,
-.vehicle-detail-page .condition-list li>span,
 .vehicle-detail-page .condition-list li p,
-.vehicle-detail-page .detail-contact>div:first-child>span,
 .vehicle-detail-page .detail-contact-actions p,
-.vehicle-detail-page .footer-nav a,
 .vehicle-detail-page .footer-contact-row,
 .vehicle-detail-page .footer-legal p,
-.vehicle-detail-page .footer .footer-developer,
-.vehicle-detail-page .footer-developer a,
-.vehicle-detail-page .modal label,
 .vehicle-detail-page .modal small{
   font-size:13px;
 }
