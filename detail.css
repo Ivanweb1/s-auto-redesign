@@ -138,3 +138,51 @@
   .vehicle-story{grid-template-columns:1fr;padding:62px 22px;gap:34px}
   .story-copy{border-left:0;border-top:1px solid var(--line);padding:26px 0 0}
 }
+
+/* Minimum readable type size for the complete vehicle detail page */
+.vehicle-detail-page .utility-bar,
+.vehicle-detail-page .header-main>.nav>a,
+.vehicle-detail-page .mobile-nav-info p,
+.vehicle-detail-page .mobile-nav-info p span,
+.vehicle-detail-page .phone span,
+.vehicle-detail-page .button,
+.vehicle-detail-page .breadcrumbs,
+.vehicle-detail-page .vehicle-image-topline,
+.vehicle-detail-page .vehicle-image-caption span,
+.vehicle-detail-page .vehicle-kicker,
+.vehicle-detail-page .vehicle-lead,
+.vehicle-detail-page .vehicle-quick-specs dt,
+.vehicle-detail-page .vehicle-quick-specs dd,
+.vehicle-detail-page .vehicle-price span,
+.vehicle-detail-page .finance-heading>span,
+.vehicle-detail-page .finance-heading div>span,
+.vehicle-detail-page .term-picker button,
+.vehicle-detail-page .payment-control b,
+.vehicle-detail-page .payment-control output,
+.vehicle-detail-page .payment-control small,
+.vehicle-detail-page .monthly-payment>span,
+.vehicle-detail-page .monthly-payment small,
+.vehicle-detail-page .summary-note,
+.vehicle-detail-page .eyebrow,
+.vehicle-detail-page .condition-list li>span,
+.vehicle-detail-page .condition-list li p,
+.vehicle-detail-page .detail-contact>div:first-child>span,
+.vehicle-detail-page .detail-contact-actions p,
+.vehicle-detail-page .footer-nav a,
+.vehicle-detail-page .footer-contact-row,
+.vehicle-detail-page .footer-legal p,
+.vehicle-detail-page .footer .footer-developer,
+.vehicle-detail-page .footer-developer a,
+.vehicle-detail-page .modal label,
+.vehicle-detail-page .modal small{
+  font-size:13px;
+}
+
+@media(min-width:1101px){
+  .vehicle-detail-page .vehicle-summary{padding-top:20px;padding-bottom:16px}
+  .vehicle-detail-page .vehicle-summary h1{margin-top:14px;margin-bottom:8px}
+  .vehicle-detail-page .vehicle-quick-specs>div{padding-top:6px;padding-bottom:6px}
+  .vehicle-detail-page .vehicle-price{padding-top:7px;padding-bottom:7px}
+  .vehicle-detail-page .finance-box{margin-top:9px;padding-top:12px;padding-bottom:12px}
+  .vehicle-detail-page .summary-note{line-height:1.35}
+}
