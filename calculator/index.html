@@ -9,7 +9,7 @@
     <meta name="description" content="Калькулятор рассрочки автомобиля S-AUTO без участия банков." />
     <title>Калькулятор рассрочки автомобиля — S-AUTO</title>
     <link rel="stylesheet" href="../styles.css?v=20260831-portrait-compact" />
-    <link rel="stylesheet" href="../calculator.css?v=20260918-4" />
+    <link rel="stylesheet" href="../calculator.css?v=20260918-5" />
   </head>
   <body class="calculator-page">
     <div class="page-shell">
@@ -59,6 +59,9 @@
               <span class="eyebrow"><span></span> Ваш расчёт</span>
               <h2 id="calculator-heading">Введите стоимость<br /><em>автомобиля</em></h2>
               <p>Изменяйте параметры — ежемесячный платёж пересчитается автоматически.</p>
+              <div class="calculator-tips" aria-label="Преимущества расчёта">
+                <span>Без банка</span><span>От 1 до 3 лет</span><span>Мгновенный пересчёт</span>
+              </div>
             </div>
 
           <form class="installment-calculator" id="installment-calculator" novalidate>
@@ -67,7 +70,11 @@
               <label for="car-price">Стоимость автомобиля:</label>
               <div class="calculator-control">
                 <div class="money-input"><input id="car-price" name="car_price" inputmode="numeric" value="500 000" aria-describedby="car-price-help" /><span>₽</span></div>
-                <small id="car-price-help">В рублях, минимум 350 000 ₽.</small>
+                <div class="calculator-range-wrap">
+                  <input class="calculator-range" type="range" min="350000" max="10000000" step="50000" value="500000" data-price-range aria-label="Стоимость автомобиля ползунком" />
+                  <div><span>350 000 ₽</span><span>10 млн ₽</span></div>
+                </div>
+                <small id="car-price-help">Минимальная стоимость автомобиля — 350 000 ₽.</small>
               </div>
             </div>
 
@@ -75,7 +82,11 @@
               <div class="calculator-row-number">02</div>
               <label for="first-payment">Первоначальный платёж:</label>
               <div class="calculator-control">
-                <div class="money-input"><input id="first-payment" name="first_pay" inputmode="numeric" value="150 000" aria-describedby="first-payment-help" /><span>₽</span></div>
+                <div class="money-input money-input-with-badge"><input id="first-payment" name="first_pay" inputmode="numeric" value="150 000" aria-describedby="first-payment-help" /><span>₽</span><b data-down-percent>30%</b></div>
+                <div class="calculator-range-wrap">
+                  <input class="calculator-range" type="range" min="150000" max="350000" step="10000" value="150000" data-down-range aria-label="Первоначальный платёж ползунком" />
+                  <div><span data-down-min>30% минимум</span><span>до 70%</span></div>
+                </div>
                 <small id="first-payment-help">Минимум 25%, если стоимость автомобиля от 1 000 000 ₽; 30% — если меньше.</small>
               </div>
             </div>
@@ -83,14 +94,22 @@
             <div class="calculator-row">
               <div class="calculator-row-number">03</div>
               <label for="payment-term">Срок рассрочки:</label>
-              <div class="calculator-control select-wrap">
-                <select id="payment-term" name="time_pay">
+              <div class="calculator-control calculator-term-control">
+                <select class="calculator-native-select" id="payment-term" name="time_pay" aria-label="Срок рассрочки">
                   <option value="12">1 год</option>
                   <option value="18" selected>1,5 года</option>
                   <option value="24">2 года</option>
                   <option value="30">2,5 года</option>
                   <option value="36">3 года</option>
                 </select>
+                <div class="term-segments" role="group" aria-label="Быстрый выбор срока рассрочки">
+                  <button type="button" data-term-option="12">12<small>мес.</small></button>
+                  <button class="is-active" type="button" data-term-option="18">18<small>мес.</small></button>
+                  <button type="button" data-term-option="24">24<small>мес.</small></button>
+                  <button type="button" data-term-option="30">30<small>мес.</small></button>
+                  <button type="button" data-term-option="36">36<small>мес.</small></button>
+                </div>
+                <small>Выберите срок — платёж обновится сразу.</small>
               </div>
             </div>
 
@@ -203,6 +222,6 @@
       </form>
       <div class="success" hidden><span>✓</span><h3>Заявка принята</h3><p>Спасибо! Мы свяжемся с вами в рабочее время.</p></div>
     </dialog>
-    <script src="../calculator.js?v=20260918-2"></script>
+    <script src="../calculator.js?v=20260918-3"></script>
   </body>
 </html>

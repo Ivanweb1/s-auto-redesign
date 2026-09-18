@@ -38,6 +38,11 @@ if (calculator) {
   const paymentOutput = calculator.querySelector('#monthly-payment');
   const errorOutput = calculator.querySelector('#calculator-error');
   const submitButton = calculator.querySelector('.calculator-submit');
+  const priceRange = calculator.querySelector('[data-price-range]');
+  const downRange = calculator.querySelector('[data-down-range]');
+  const downPercent = calculator.querySelector('[data-down-percent]');
+  const downMinimum = calculator.querySelector('[data-down-min]');
+  const termOptions = [...calculator.querySelectorAll('[data-term-option]')];
   const money = new Intl.NumberFormat('ru-RU', { maximumFractionDigits: 0 });
   const guidePrice = document.querySelector('[data-guide-price]');
   const guideDown = document.querySelector('[data-guide-down]');
@@ -58,6 +63,13 @@ if (calculator) {
     return Math.floor(sum * rate * growth / (growth - 1));
   }
 
+  function setRangeProgress(range) {
+    const min = Number(range.min);
+    const max = Number(range.max);
+    const progress = max > min ? ((Number(range.value) - min) / (max - min)) * 100 : 0;
+    range.style.setProperty('--progress', `${progress}%`);
+  }
+
   function calculate() {
     const price = numberFromInput(priceInput);
     const firstPayment = numberFromInput(firstPaymentInput);
@@ -67,6 +79,20 @@ if (calculator) {
     const financedAmount = price - firstPayment;
     const share = price ? Math.round(firstPayment / price * 100) : 0;
     let error = '';
+
+    priceRange.value = Math.min(Math.max(price, Number(priceRange.min)), Number(priceRange.max));
+    downRange.min = minimumFirstPayment;
+    downRange.max = Math.max(minimumFirstPayment, Math.floor(price * 0.7));
+    downRange.value = Math.min(Math.max(firstPayment, Number(downRange.min)), Number(downRange.max));
+    downPercent.textContent = `${share}%`;
+    downMinimum.textContent = `${minimumPercent * 100}% минимум`;
+    setRangeProgress(priceRange);
+    setRangeProgress(downRange);
+    termOptions.forEach((button) => {
+      const active = Number(button.dataset.termOption) === months;
+      button.classList.toggle('is-active', active);
+      button.setAttribute('aria-pressed', String(active));
+    });
 
     guidePrice.textContent = `${money.format(price)} ₽`;
     guideDown.textContent = `${money.format(firstPayment)} ₽`;
@@ -105,6 +131,16 @@ if (calculator) {
     });
   });
 
+  priceRange.addEventListener('input', () => {
+    priceInput.value = money.format(Number(priceRange.value));
+    calculate();
+  });
+
+  downRange.addEventListener('input', () => {
+    firstPaymentInput.value = money.format(Number(downRange.value));
+    calculate();
+  });
+
   priceInput.addEventListener('blur', () => {
     const price = numberFromInput(priceInput);
     const minimumPercent = price >= 1000000 ? 0.25 : 0.3;
@@ -113,5 +149,9 @@ if (calculator) {
   });
 
   termSelect.addEventListener('change', calculate);
+  termOptions.forEach((button) => button.addEventListener('click', () => {
+    termSelect.value = button.dataset.termOption;
+    calculate();
+  }));
   calculate();
 }
