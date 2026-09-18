@@ -39,6 +39,12 @@ if (calculator) {
   const errorOutput = calculator.querySelector('#calculator-error');
   const submitButton = calculator.querySelector('.calculator-submit');
   const money = new Intl.NumberFormat('ru-RU', { maximumFractionDigits: 0 });
+  const guidePrice = document.querySelector('[data-guide-price]');
+  const guideDown = document.querySelector('[data-guide-down]');
+  const guideMonthly = document.querySelector('[data-guide-monthly]');
+  const guideShare = document.querySelector('[data-guide-share]');
+  const guideRing = document.querySelector('.guide-ring');
+  const guideTerms = document.querySelectorAll('[data-guide-term]');
 
   const numberFromInput = (input) => Number(input.value.replace(/[^0-9]/g, '')) || 0;
   const formatInput = (input) => {
@@ -59,7 +65,14 @@ if (calculator) {
     const minimumPercent = price >= 1000000 ? 0.25 : 0.3;
     const minimumFirstPayment = Math.floor(price * minimumPercent);
     const financedAmount = price - firstPayment;
+    const share = price ? Math.round(firstPayment / price * 100) : 0;
     let error = '';
+
+    guidePrice.textContent = `${money.format(price)} ₽`;
+    guideDown.textContent = `${money.format(firstPayment)} ₽`;
+    guideTerms.forEach((item) => { item.textContent = months; });
+    guideShare.textContent = `${share}%`;
+    guideRing.style.setProperty('--share', `${Math.min(Math.max(share, 0), 100)}%`);
 
     if (price < 350000) error = 'Минимальная цена автомобиля — 350 000 ₽.';
     else if (firstPayment < minimumFirstPayment) error = `Первоначальный платёж — минимум ${minimumPercent * 100}% от стоимости автомобиля.`;
@@ -71,10 +84,13 @@ if (calculator) {
       errorOutput.textContent = error;
       errorOutput.hidden = false;
       submitButton.hidden = true;
+      guideMonthly.textContent = '—';
       return;
     }
 
-    paymentOutput.textContent = `${money.format(monthlyPayment(financedAmount, months))} ₽`;
+    const payment = monthlyPayment(financedAmount, months);
+    paymentOutput.textContent = `${money.format(payment)} ₽`;
+    guideMonthly.textContent = `${money.format(payment)} ₽`;
     paymentOutput.classList.remove('is-error');
     errorOutput.hidden = true;
     submitButton.hidden = false;

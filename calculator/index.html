@@ -9,7 +9,7 @@
     <meta name="description" content="Калькулятор рассрочки автомобиля S-AUTO без участия банков." />
     <title>Калькулятор рассрочки автомобиля — S-AUTO</title>
     <link rel="stylesheet" href="../styles.css?v=20260831-portrait-compact" />
-    <link rel="stylesheet" href="../calculator.css?v=20260918-2" />
+    <link rel="stylesheet" href="../calculator.css?v=20260918-3" />
   </head>
   <body class="calculator-page">
     <div class="page-shell">
@@ -109,20 +109,61 @@
 
         <article class="calculator-article" aria-labelledby="article-title">
           <header>
-            <span class="eyebrow dark"><span></span> Как пользоваться</span>
-            <h2 id="article-title">Онлайн-калькулятор<br /><em>стоимости рассрочки</em></h2>
+            <div class="calculator-article-heading">
+              <span class="eyebrow dark"><span></span> Как пользоваться</span>
+              <h2 id="article-title">Онлайн-калькулятор<br /><em>стоимости рассрочки</em></h2>
+            </div>
+            <p class="calculator-article-lead">Задайте три параметра — калькулятор покажет ориентировочную финансовую нагрузку и поможет сравнить разные сценарии покупки.</p>
           </header>
-          <div class="calculator-article-copy">
-            <p>Компания S-AUTO предоставляет наиболее современный сервис и предлагает своим клиентам различные удобные инструменты, одним из которых является онлайн-калькулятор для расчёта платежей при покупке автомобиля в рассрочку.</p>
-            <p>Вы можете <strong>купить автомобиль в рассрочку без банка</strong> от европейских, японских и американских брендов на привлекательных условиях. В S-AUTO предлагают авто в рассрочку с первоначальным взносом от 25% от стоимости. Чтобы оценить ежемесячную финансовую нагрузку, используйте онлайн-калькулятор на сайте компании.</p>
-            <p><strong>Чтобы использовать онлайн-калькулятор стоимости рассрочки авто, укажите следующие исходные данные:</strong></p>
-            <ul>
-              <li>Стоимость автомобиля, которая должна быть от 350 тыс. руб. и более;</li>
-              <li>Размер первоначального взноса — от 25% от стоимости машины;</li>
-              <li>Период оформления договора со сроком полной выплаты от 1 года до 3 лет.</li>
-            </ul>
-            <p>После того как все необходимые сведения будут указаны, система выполнит автоматический расчёт суммы ежемесячного платежа. Пробуйте различные варианты, меняйте размер первоначального взноса и срок рассрочки, пока не будет найден оптимальный вариант. После этого можно сразу <button class="article-link js-open-modal" type="button">отправить заявку</button> на оформление машины в рассрочку.</p>
-            <p>С вами свяжется менеджер компании для уточнения всех деталей, выбора конкретного автомобиля из <a href="../catalog/">каталога</a> и оформления договора.</p>
+
+          <div class="calculator-guide">
+            <div class="guide-cards" aria-label="Три параметра расчёта">
+              <section class="guide-card">
+                <div class="guide-card-top"><span>01</span><small>Стоимость</small></div>
+                <h3>Выберите бюджет автомобиля</h3>
+                <strong>от 350 000 ₽</strong>
+                <div class="guide-scale" aria-hidden="true"><span></span><i></i></div>
+                <p>Укажите цену автомобиля из каталога или с внешней площадки.</p>
+              </section>
+
+              <section class="guide-card guide-card-accent">
+                <div class="guide-card-top"><span>02</span><small>Первый взнос</small></div>
+                <h3>Определите комфортный взнос</h3>
+                <div class="guide-ring" aria-hidden="true"><span data-guide-share>30%</span></div>
+                <p>Минимум 25% для автомобилей от 1 млн ₽ и 30% — для остальных.</p>
+              </section>
+
+              <section class="guide-card">
+                <div class="guide-card-top"><span>03</span><small>Срок</small></div>
+                <h3>Настройте срок договора</h3>
+                <strong><span data-guide-term>18</span> месяцев</strong>
+                <div class="guide-term-track" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+                <div class="guide-term-labels"><span>12</span><span>36 мес.</span></div>
+                <p>Сравните варианты от одного года до трёх лет.</p>
+              </section>
+            </div>
+
+            <section class="guide-result" aria-labelledby="guide-result-title">
+              <div class="guide-result-copy">
+                <span>Ваш сценарий</span>
+                <h3 id="guide-result-title">Результат меняется<br />вместе с параметрами</h3>
+                <p>Расчёт ниже синхронизирован с калькулятором. После выбора варианта менеджер уточнит детали, поможет подобрать автомобиль и оформить договор.</p>
+                <button class="button js-open-modal" type="button">Отправить заявку <span>↗</span></button>
+              </div>
+              <div class="guide-result-visual">
+                <dl>
+                  <div><dt>Автомобиль</dt><dd data-guide-price>500 000 ₽</dd></div>
+                  <div><dt>Первый взнос</dt><dd data-guide-down>150 000 ₽</dd></div>
+                  <div><dt>Срок</dt><dd><span data-guide-term>18</span> мес.</dd></div>
+                </dl>
+                <div class="guide-result-total"><span>Платёж в месяц</span><strong data-guide-monthly>32 324 ₽</strong></div>
+              </div>
+            </section>
+
+            <div class="guide-note">
+              <span>Без банка</span>
+              <p>Вы можете выбрать автомобиль в <a href="../catalog/">каталоге</a>, на Дроме, Авито или Авто.ру. Условия фиксируются в договоре.</p>
+            </div>
           </div>
         </article>
       </main>
@@ -162,6 +203,6 @@
       </form>
       <div class="success" hidden><span>✓</span><h3>Заявка принята</h3><p>Спасибо! Мы свяжемся с вами в рабочее время.</p></div>
     </dialog>
-    <script src="../calculator.js?v=20260918-1"></script>
+    <script src="../calculator.js?v=20260918-2"></script>
   </body>
 </html>
