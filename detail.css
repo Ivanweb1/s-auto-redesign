@@ -39,8 +39,8 @@
 .vehicle-quick-specs>div:nth-child(-n+4){border-bottom:1px solid var(--line)}
 .vehicle-quick-specs>div:nth-child(4n+1){padding-left:0}
 .vehicle-quick-specs>div:nth-child(4n){padding-right:0;border-right:0}
-.vehicle-quick-specs dt{font-size:7px;line-height:1.2;letter-spacing:1px;text-transform:uppercase;color:#99958d}
-.vehicle-quick-specs dd{margin:6px 0 0;font-size:11px;line-height:1.25;white-space:nowrap}
+.vehicle-quick-specs dt{font-size:9px;line-height:1.2;letter-spacing:1px;text-transform:uppercase;color:#99958d}
+.vehicle-quick-specs dd{margin:6px 0 0;font-size:13px;line-height:1.25;white-space:nowrap}
 .vehicle-conditions,.vehicle-story,.detail-contact{
   padding-left:var(--content-gutter);
   padding-right:var(--content-gutter);
@@ -69,10 +69,10 @@
     letter-spacing:-3.1px;
     margin:18px 0 10px;
   }
-  .vehicle-lead{font-size:11px;line-height:1.45;margin-bottom:8px}
+  .vehicle-lead{font-size:13px;line-height:1.45;margin-bottom:8px}
   .vehicle-quick-specs{margin-bottom:8px}
   .vehicle-quick-specs>div{padding-top:7px;padding-bottom:7px}
-  .vehicle-quick-specs dd{margin-top:4px;font-size:10px}
+  .vehicle-quick-specs dd{margin-top:4px;font-size:12px}
   .vehicle-price{padding:9px 0}
   .vehicle-price strong{font-size:23px}
   .finance-box{
