@@ -4,7 +4,7 @@ import { createServer } from 'node:http';
 import { extname, join, normalize } from 'node:path';
 
 const root = new URL('.', import.meta.url).pathname.replace(/^\/(\w:)/, '$1');
-const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.png': 'image/png', '.ttf': 'font/ttf' };
+const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.webp': 'image/webp', '.ttf': 'font/ttf' };
 
 createServer(async (request, response) => {
   const requested = request.url === '/' ? '/index.html' : request.url.split('?')[0];
