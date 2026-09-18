@@ -1,15 +1,16 @@
 .calculator-page{background:#f5f3ee;color:var(--ink)}
 .calculator-page .page-shell{overflow:clip}
 
-.calculator-title{position:relative;padding:34px 4.5% 68px;background:#eeece7;border-bottom:1px solid var(--line)}
-.calculator-breadcrumbs{display:flex;align-items:center;gap:12px;margin-bottom:52px;color:#98948c;font-size:9px;letter-spacing:1.25px;text-transform:uppercase}
-.calculator-breadcrumbs a{color:#6f6b64;text-decoration:none}
+.calculator-hero{background:#1b1b1a;color:#fff}
+.calculator-title{position:relative;padding:34px 4.5% 52px}
+.calculator-breadcrumbs{display:flex;align-items:center;gap:12px;margin-bottom:46px;color:#77756f;font-size:9px;letter-spacing:1.25px;text-transform:uppercase}
+.calculator-breadcrumbs a{color:#aaa7a0;text-decoration:none}
 .calculator-breadcrumbs a:hover{color:var(--orange)}
-.calculator-index{position:absolute;right:4.5%;top:39px;color:#aaa69e;font-size:9px;letter-spacing:1.5px;text-transform:uppercase}
+.calculator-index{position:absolute;right:4.5%;top:39px;color:#66645f;font-size:9px;letter-spacing:1.5px;text-transform:uppercase}
 .calculator-title h1{max-width:1150px;margin:0;font-size:clamp(58px,7vw,110px);font-weight:600;line-height:.87;letter-spacing:-5.8px}
 .calculator-title h1 em,.calculator-intro h2 em,.calculator-article h2 em{font-family:Georgia,serif;font-weight:400;color:var(--orange)}
 
-.calculator-section{display:grid;grid-template-columns:minmax(320px,.72fr) minmax(620px,1.28fr);gap:clamp(50px,7vw,120px);padding:86px 4.5% 96px;background:#1b1b1a;color:#fff}
+.calculator-section{display:grid;grid-template-columns:minmax(320px,.72fr) minmax(620px,1.28fr);gap:clamp(50px,7vw,120px);padding:46px 4.5% 96px;border-top:1px solid rgba(255,255,255,.13)}
 .calculator-intro,.installment-calculator,.calculator-row>*,.calculator-control{min-width:0}
 .calculator-intro{align-self:start;position:sticky;top:32px}
 .calculator-intro h2{margin:28px 0 24px;font-size:clamp(46px,4.4vw,72px);font-weight:600;line-height:.95;letter-spacing:-3.5px}
@@ -65,11 +66,11 @@
 }
 
 @media(max-width:680px){
-  .calculator-title{padding:24px 22px 48px}
+  .calculator-title{padding:24px 22px 42px}
   .calculator-breadcrumbs{margin-bottom:42px;overflow:auto;white-space:nowrap}
   .calculator-index{display:none}
   .calculator-title h1{font-size:50px;line-height:.92;letter-spacing:-3px}
-  .calculator-section{padding:68px 22px 76px;gap:44px;overflow:hidden}
+  .calculator-section{padding:54px 22px 76px;gap:44px;overflow:hidden}
   .calculator-section>*,.installment-calculator,.calculator-row,.calculator-control,.money-input{width:100%;max-width:100%}
   .calculator-intro h2{font-size:39px;letter-spacing:-2.2px}
   .calculator-row{grid-template-columns:1fr;gap:16px;padding:25px 0;min-height:0}

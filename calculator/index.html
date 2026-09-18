@@ -9,7 +9,7 @@
     <meta name="description" content="Калькулятор рассрочки автомобиля S-AUTO без участия банков." />
     <title>Калькулятор рассрочки автомобиля — S-AUTO</title>
     <link rel="stylesheet" href="../styles.css?v=20260831-portrait-compact" />
-    <link rel="stylesheet" href="../calculator.css?v=20260918-1" />
+    <link rel="stylesheet" href="../calculator.css?v=20260918-2" />
   </head>
   <body class="calculator-page">
     <div class="page-shell">
@@ -45,20 +45,21 @@
       </header>
 
       <main>
-        <section class="calculator-title" aria-labelledby="page-title">
-          <nav class="calculator-breadcrumbs" aria-label="Хлебные крошки">
-            <a href="../">Главная</a><span>—</span><span>Калькулятор рассрочки</span>
-          </nav>
-          <span class="calculator-index">S-AUTO · БЕЗ БАНКА</span>
-          <h1 id="page-title">Калькулятор<br /><em>рассрочки автомобиля</em></h1>
-        </section>
-
-        <section class="calculator-section" aria-labelledby="calculator-heading">
-          <div class="calculator-intro">
-            <span class="eyebrow"><span></span> Ваш расчёт</span>
-            <h2 id="calculator-heading">Введите стоимость<br /><em>автомобиля</em></h2>
-            <p>Изменяйте параметры — ежемесячный платёж пересчитается автоматически.</p>
+        <section class="calculator-hero" aria-labelledby="page-title">
+          <div class="calculator-title">
+            <nav class="calculator-breadcrumbs" aria-label="Хлебные крошки">
+              <a href="../">Главная</a><span>—</span><span>Калькулятор рассрочки</span>
+            </nav>
+            <span class="calculator-index">S-AUTO · БЕЗ БАНКА</span>
+            <h1 id="page-title">Калькулятор<br /><em>рассрочки автомобиля</em></h1>
           </div>
+
+          <div class="calculator-section" role="region" aria-labelledby="calculator-heading">
+            <div class="calculator-intro">
+              <span class="eyebrow"><span></span> Ваш расчёт</span>
+              <h2 id="calculator-heading">Введите стоимость<br /><em>автомобиля</em></h2>
+              <p>Изменяйте параметры — ежемесячный платёж пересчитается автоматически.</p>
+            </div>
 
           <form class="installment-calculator" id="installment-calculator" novalidate>
             <div class="calculator-row">
@@ -102,7 +103,8 @@
               </div>
               <button class="button js-open-modal calculator-submit" type="button">Отправить заявку на рассрочку <span>↗</span></button>
             </div>
-          </form>
+            </form>
+          </div>
         </section>
 
         <article class="calculator-article" aria-labelledby="article-title">
