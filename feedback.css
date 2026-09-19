@@ -80,6 +80,17 @@
   .feedback-form-heading{position:static}
 }
 
+.feedback-title h1 em{
+  font-family:Muller,sans-serif;
+  font-style:normal;
+}
+.feedback-field input,
+.feedback-field select,
+.feedback-field textarea,
+.additional-files-toggle{
+  font-family:Muller,sans-serif;
+}
+
 @media(max-width:680px){
   .feedback-title{padding:24px 22px 54px}
   .feedback-breadcrumbs{margin-bottom:42px;white-space:nowrap;overflow:auto}

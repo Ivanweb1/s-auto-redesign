@@ -10,6 +10,19 @@
   border-top:1px solid rgba(255,255,255,.13);
   color:#fff;
 }
+
+.vehicle-summary h1 em,
+.vehicle-specs h2 em,
+.vehicle-conditions h2 em,
+.detail-contact h2 em{
+  font-family:Muller,sans-serif;
+  font-style:normal;
+}
+.vehicle-conditions::before,
+.story-number,
+.term-picker button{
+  font-family:Muller,sans-serif;
+}
 .condition-list li{
   min-height:0;
   align-items:start;

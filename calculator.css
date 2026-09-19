@@ -119,6 +119,18 @@
   .guide-result-visual{border-left:0;border-top:1px solid var(--line)}
 }
 
+.calculator-title h1 em,
+.calculator-intro h2 em,
+.calculator-article h2 em{
+  font-family:Muller,sans-serif;
+  font-style:normal;
+}
+.money-input input,
+.calculator-control select,
+.term-segments button{
+  font-family:Muller,sans-serif;
+}
+
 @media(max-width:680px){
   .calculator-title{padding:24px 22px 42px}
   .calculator-breadcrumbs{margin-bottom:42px;overflow:auto;white-space:nowrap}
