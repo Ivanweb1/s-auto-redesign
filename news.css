@@ -9,3 +9,5 @@
 @media(prefers-reduced-motion:reduce){.featured-image img,.card-image img,.card-arrow{transition:none}}
 .news-hero::after{display:none}
 .article-card-dark{display:block;min-height:0}.article-card-dark .card-copy{display:block;min-height:280px;padding:27px 72px 32px 28px}.article-card-dark .card-kicker{display:none}.article-card-dark .card-copy::before{display:none}
+@media(min-width:681px){.card-image{height:350px}}
+.card-image img{object-position:center center}.article-card:nth-child(1) .card-image img{object-position:center 54%}.article-card:nth-child(2) .card-image img{object-position:61% center}.article-card:nth-child(3) .card-image img{object-position:center 58%}.article-card:nth-child(4) .card-image img{object-position:center 48%}.article-card:nth-child(5) .card-image img{object-position:center 48%}
