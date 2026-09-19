@@ -52,10 +52,15 @@ body{background:#fff}.page-shell{width:100%;margin:0;box-shadow:none}.conversion
 .utility-bar a{color:#b7bcc0}
 .header-main{background:linear-gradient(105deg,#192126 0%,#10161a 100%);box-shadow:inset 0 -1px rgba(255,255,255,.07)}
 .header-main>.nav>a{color:#e6e7e5}
+.header-main>.nav{gap:clamp(12px,1.5vw,24px)}
+.header-main>.nav>a{font-size:10px;letter-spacing:.45px;white-space:nowrap}
+.header-main>.nav>a.is-active{color:#fff}
+.header-main>.nav>a.is-active::after{right:0}
 .phone{color:#fff}
 .phone span{color:#858b8f}
 .menu-toggle span{background:#fff}
 @media(max-width:1100px){.header-main>.nav.open{background:#151c21}.mobile-nav-info{border-color:rgba(255,255,255,.12)}.mobile-nav-info p{color:#e6e7e5}.mobile-nav-info p span{color:#858b8f}.mobile-phone{color:#fff!important}}
+@media(max-width:1460px) and (min-width:1101px){.header-main>.nav{gap:15px}.header-main>.nav>a{font-size:9px}.header-actions .phone{display:none}}
 
 /* Client readability feedback: no supporting copy below 11px */
 .utility-bar,
