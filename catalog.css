@@ -9,7 +9,7 @@
 .catalog-breadcrumbs{position:relative;z-index:2;display:flex;align-items:center;gap:12px;color:#777f83;font-size:11px;letter-spacing:1.25px;text-transform:uppercase}
 .catalog-breadcrumbs a{color:#aab0b3;text-decoration:none}.catalog-breadcrumbs a:hover{color:var(--orange)}
 .catalog-index{position:absolute;right:var(--content-gutter);top:38px;color:#656d71;font-size:11px;letter-spacing:1.5px;text-transform:uppercase}
-.catalog-hero-copy{position:relative;z-index:2;margin-top:66px}
+.catalog-hero-copy{position:relative;z-index:2;display:grid;grid-template-columns:minmax(600px,1.4fr) minmax(280px,.6fr);gap:70px;align-items:end;margin-top:66px}
 .catalog-hero h1{margin:0;font-size:clamp(64px,7vw,112px);font-weight:500;line-height:.83;letter-spacing:clamp(-7px,-.48vw,-4px)}
 .catalog-hero h1 em,.catalog-filter-intro h2 em{font-family:Georgia,serif;font-weight:400;font-style:normal;color:var(--orange)}
 .catalog-hero-copy p{position:relative;max-width:470px;margin:0 0 6px;padding-left:28px;border-left:1px solid rgba(255,255,255,.18);color:#a9afb2;font-size:15px;line-height:1.7}
@@ -70,6 +70,9 @@
 .compact-filter .filter-year-controls{gap:7px}.compact-filter .year-divider{font-size:11px}.compact-submit{height:52px;min-width:142px;padding:0 18px;box-shadow:none}
 .catalog-page-list{padding-top:18px}
 .catalog-page-list .car-card[hidden]{display:none!important}.catalog-empty{max-width:1440px;margin:0 auto 18px;padding:64px 30px;text-align:center;border:1px solid var(--line);background:#fbfaf7}.catalog-empty>span{display:grid;place-items:center;width:48px;height:48px;margin:0 auto 20px;border:1px solid #d2cec5;border-radius:50%;color:var(--orange)}.catalog-empty h3{margin:0 0 10px;font-size:30px;font-weight:500}.catalog-empty p{max-width:540px;margin:0 auto 25px;color:#77736c;font-size:13px;line-height:1.6}
+.catalog-pagination{display:grid;grid-template-columns:150px 1fr 150px;align-items:center;max-width:1440px;margin:36px auto 18px;padding:26px 0 8px;border-top:1px solid var(--line)}
+.catalog-pagination[hidden]{display:none}.pagination-link{display:flex;align-items:center;gap:12px;width:max-content;color:#77736c;text-decoration:none;font-size:10px;letter-spacing:1px;text-transform:uppercase}.pagination-link span{display:grid;place-items:center;width:38px;height:38px;border:1px solid #cbc7be;border-radius:50%;color:#171716;font-size:15px;transition:.22s}.pagination-link b{font-weight:500}.pagination-link:hover{color:var(--orange)}.pagination-link:hover span{border-color:var(--orange);background:var(--orange);color:#fff}.pagination-next{justify-self:end}.pagination-prev{justify-self:start}.pagination-link.is-disabled{opacity:.35;pointer-events:none}
+.pagination-numbers{display:flex;align-items:center;justify-content:center;gap:4px}.pagination-number{display:grid;place-items:center;width:42px;height:42px;border:1px solid transparent;color:#77736c;text-decoration:none;font-size:11px;letter-spacing:.4px;transition:.22s}.pagination-number:hover{border-color:#cbc7be;color:#171716}.pagination-number.is-active{border-color:var(--orange);background:var(--orange);color:#fff}.pagination-ellipsis{display:grid;place-items:center;width:30px;color:#aaa69f;font-size:15px}
 
 @media(max-width:1180px){
   .compact-filter-grid{grid-template-columns:1.3fr 1fr 1fr}.compact-field:nth-child(4){grid-column:1/3}.compact-submit{grid-column:3;width:100%}
@@ -78,4 +81,5 @@
   .catalog-page .catalog-hero{min-height:280px}.catalog-page .catalog-hero-copy{margin-top:55px}.catalog-page .catalog-hero h1{font-size:50px}
   .catalog-tools{padding:18px 14px 8px}.compact-filter-top{min-height:62px;padding:14px 16px}.compact-filter-top>div{gap:0}.compact-filter-top .catalog-eyebrow{display:none}.compact-filter-top h2{font-size:21px}.compact-filter-grid{grid-template-columns:1fr 1fr;gap:13px 10px;padding:17px 16px 18px}.compact-price{grid-column:1/-1}.compact-field:nth-child(4){grid-column:1/-1}.compact-submit{grid-column:1/-1;width:100%}.compact-label{font-size:11px}.compact-filter .filter-select-wrap select{font-size:13px}
   .catalog-page-list{padding-top:12px}.catalog-empty{padding:48px 20px}.catalog-empty h3{font-size:26px}
+  .catalog-pagination{grid-template-columns:42px 1fr 42px;margin-top:24px;padding-top:20px}.pagination-link b{display:none}.pagination-link span{width:36px;height:36px}.pagination-numbers{gap:1px}.pagination-number{width:34px;height:36px;font-size:10px}.pagination-ellipsis{width:18px}.pagination-numbers .pagination-number:nth-of-type(4),.pagination-numbers .pagination-number:nth-of-type(5){display:none}
 }

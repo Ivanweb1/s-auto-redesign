@@ -10,6 +10,7 @@ const yearTo = document.querySelector('#year-to');
 const priceFrom = document.querySelector('#price-from');
 const priceTo = document.querySelector('#price-to');
 const emptyState = document.querySelector('#catalog-empty');
+const pagination = document.querySelector('#catalog-pagination');
 const carCards = [...document.querySelectorAll('.catalog-page-list .car-card')];
 
 const money = new Intl.NumberFormat('ru-RU', { maximumFractionDigits: 0 });
@@ -74,7 +75,81 @@ function applyFilters() {
     if (matches) visible += 1;
   });
   emptyState.hidden = visible !== 0;
+  pagination.hidden = visible === 0;
   return filters;
+}
+
+function pageUrl(page) {
+  const params = new URLSearchParams(window.location.search);
+  params.set('page', String(page));
+  return `${window.location.pathname}?${params.toString()}#catalog-results`;
+}
+
+function renderPagination() {
+  const totalPages = Number(pagination.dataset.totalPages) || 1;
+  const requestedPage = Number(new URLSearchParams(window.location.search).get('page')) || 1;
+  const currentPage = Math.min(Math.max(requestedPage, 1), totalPages);
+  const pages = currentPage <= 3
+    ? [1, 2, 3, 4, 5, 'ellipsis', totalPages]
+    : currentPage >= totalPages - 2
+      ? [1, 'ellipsis', totalPages - 4, totalPages - 3, totalPages - 2, totalPages - 1, totalPages]
+      : [1, 'ellipsis-start', currentPage - 1, currentPage, currentPage + 1, 'ellipsis-end', totalPages];
+
+  pagination.replaceChildren();
+  const addLink = (label, page, className = '') => {
+    const link = document.createElement('a');
+    link.className = `pagination-link ${className}`.trim();
+    link.href = pageUrl(page);
+    link.setAttribute('aria-label', label);
+    link.textContent = className ? '' : String(page);
+    if (page === currentPage && !className) {
+      link.classList.add('is-active');
+      link.setAttribute('aria-current', 'page');
+    }
+    if (className) {
+      link.innerHTML = className.includes('prev') ? '<span>←</span><b>Назад</b>' : '<b>Вперёд</b><span>→</span>';
+    }
+    pagination.append(link);
+  };
+
+  if (currentPage > 1) addLink('Предыдущая страница', currentPage - 1, 'pagination-prev');
+  else {
+    const disabled = document.createElement('span');
+    disabled.className = 'pagination-link pagination-prev is-disabled';
+    disabled.innerHTML = '<span>←</span><b>Назад</b>';
+    pagination.append(disabled);
+  }
+
+  const numbers = document.createElement('div');
+  numbers.className = 'pagination-numbers';
+  pages.forEach((page) => {
+    if (String(page).startsWith('ellipsis')) {
+      const ellipsis = document.createElement('span');
+      ellipsis.className = 'pagination-ellipsis';
+      ellipsis.textContent = '…';
+      numbers.append(ellipsis);
+      return;
+    }
+    const link = document.createElement('a');
+    link.className = 'pagination-number';
+    link.href = pageUrl(page);
+    link.textContent = String(page).padStart(2, '0');
+    link.setAttribute('aria-label', `Страница ${page}`);
+    if (page === currentPage) {
+      link.classList.add('is-active');
+      link.setAttribute('aria-current', 'page');
+    }
+    numbers.append(link);
+  });
+  pagination.append(numbers);
+
+  if (currentPage < totalPages) addLink('Следующая страница', currentPage + 1, 'pagination-next');
+  else {
+    const disabled = document.createElement('span');
+    disabled.className = 'pagination-link pagination-next is-disabled';
+    disabled.innerHTML = '<b>Вперёд</b><span>→</span>';
+    pagination.append(disabled);
+  }
 }
 
 function setUrl(filters) {
@@ -179,3 +254,4 @@ carCards.forEach((card) => {
 });
 
 applyUrlParameters();
+renderPagination();
