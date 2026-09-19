@@ -8,15 +8,22 @@ const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=
 
 createServer(async (request, response) => {
   const requested = request.url === '/' ? '/index.html' : request.url.split('?')[0];
-  const file = normalize(join(root, requested));
+  let file = normalize(join(root, requested));
   if (!file.startsWith(normalize(root))) {
     response.writeHead(403).end('Forbidden');
     return;
   }
   try {
+    const fileStat = await stat(file);
+    if (fileStat.isDirectory()) file = join(file, 'index.html');
     await stat(file);
     response.writeHead(200, { 'Content-Type': types[extname(file)] || 'application/octet-stream' });
-    createReadStream(file).pipe(response);
+    const stream = createReadStream(file);
+    stream.on('error', () => {
+      if (!response.headersSent) response.writeHead(500);
+      response.end('Server error');
+    });
+    stream.pipe(response);
   } catch {
     response.writeHead(404).end('Not found');
   }

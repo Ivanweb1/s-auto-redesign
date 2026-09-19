@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+    <meta name="description" content="Каталог автомобилей S-AUTO в рассрочку без участия банков." />
+    <title>Каталог автомобилей в рассрочку — S-AUTO</title>
+    <link rel="stylesheet" href="../styles.css?v=20260831-portrait-compact" />
+    <link rel="stylesheet" href="../catalog.css?v=20260919-1" />
+  </head>
+  <body class="catalog-page">
+    <div class="page-shell">
+      <header class="header" id="top">
+        <div class="utility-bar">
+          <span>Красноярск</span>
+          <span>ул. 78 Добровольческой бригады, 14Б, офис 63</span>
+          <span>ПН–ПТ · 10:00–18:00</span>
+          <a href="mailto:s-auto@internet.ru">s-auto@internet.ru</a>
+        </div>
+        <div class="header-main">
+          <a class="brand" href="../" aria-label="S-AUTO — на главную">
+            <img class="brand-logo" src="../assets/s-auto-logo-light.png" alt="S-AUTO — автомобили в рассрочку" />
+          </a>
+          <nav class="nav" id="main-nav" aria-label="Основная навигация">
+            <a class="is-active" href="./" aria-current="page">Автомобили</a>
+            <a href="../#how-it-works">Как это работает</a>
+            <a href="../#conditions">Условия</a>
+            <a href="#contacts">Контакты</a>
+            <div class="mobile-nav-info">
+              <p><span>Адрес</span>Красноярск, ул. 78 Добровольческой бригады, 14Б, офис 63</p>
+              <p><span>Режим работы</span>ПН–ПТ, 10:00–18:00</p>
+              <a class="mobile-phone" href="tel:+79080228000">+7 908 022-80-00</a>
+              <button class="button js-open-modal" type="button">Оставить заявку</button>
+            </div>
+          </nav>
+          <div class="header-actions">
+            <a class="phone" href="tel:+79080228000"><span>Позвонить нам</span>+7 908 022-80-00</a>
+            <button class="button button-small js-open-modal" type="button">Оставить заявку</button>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Открыть меню"><span></span><span></span></button>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="catalog-hero" aria-labelledby="catalog-title">
+          <nav class="catalog-breadcrumbs" aria-label="Хлебные крошки">
+            <a href="../">Главная</a><span>—</span><span>Каталог</span>
+          </nav>
+          <div class="catalog-hero-copy">
+            <h1 id="catalog-title">Автомобили<br /><em>в рассрочку</em></h1>
+          </div>
+        </section>
+
+        <section class="catalog-tools" aria-labelledby="filter-title">
+          <form class="compact-filter" id="catalog-filter" action="#catalog-results" method="get">
+            <div class="compact-filter-top">
+              <div><span class="catalog-eyebrow"><i></i> Фильтр</span><h2 id="filter-title">Найти автомобиль</h2></div>
+              <button class="filter-reset" type="reset">Сбросить <span aria-hidden="true"><svg viewBox="0 0 10 10"><path d="M1 1l8 8M9 1 1 9" /></svg></span></button>
+            </div>
+            <div class="compact-filter-grid">
+              <div class="compact-field compact-price">
+                <span class="compact-label">Цена, ₽</span>
+                <div class="compact-price-inputs">
+                  <label><span>От</span><input id="price-from" name="price_from" type="text" inputmode="numeric" autocomplete="off" value="350 000" /></label>
+                  <label><span>До</span><input id="price-to" name="price_to" type="text" inputmode="numeric" autocomplete="off" value="5 000 000" /></label>
+                </div>
+              </div>
+              <label class="compact-field">
+                <span class="compact-label">Марка</span>
+                <span class="filter-select-wrap"><select id="car-brand" name="brand"><option value="">Все марки</option><option>Chery</option><option>Genesis</option><option>Honda</option><option>Hyundai</option><option>Kia</option><option>Toyota</option></select><i aria-hidden="true"></i></span>
+              </label>
+              <label class="compact-field">
+                <span class="compact-label">Модель</span>
+                <span class="filter-select-wrap"><select id="car-model" name="model" disabled><option value="">Сначала выберите марку</option></select><i aria-hidden="true"></i></span>
+              </label>
+              <div class="compact-field">
+                <span class="compact-label">Год</span>
+                <div class="filter-year-controls">
+                  <label class="filter-select-wrap"><span class="sr-only">Год от</span><select id="year-from" name="year_from" aria-label="Год выпуска от"><option value="">От</option></select><i aria-hidden="true"></i></label>
+                  <span class="year-divider">—</span>
+                  <label class="filter-select-wrap"><span class="sr-only">Год до</span><select id="year-to" name="year_to" aria-label="Год выпуска до"><option value="">До</option></select><i aria-hidden="true"></i></label>
+                </div>
+              </div>
+              <button class="button compact-submit" type="submit">Показать <span>↘</span></button>
+            </div>
+          </form>
+        </section>
+
+        <section class="catalog-preview catalog-page-list" id="catalog-results" aria-label="Автомобили в наличии">
+          <div class="catalog-preview-grid">
+            <article class="car-card" data-brand="Chery" data-model="Tiggo 4 Pro" data-year="2024" data-price="1469000" data-down-payment="367250">
+              <a class="car-card-image" href="https://s-auto.company/catalog/92805-chery-tiggo-4-pro-i-restayling/" aria-label="Открыть Chery Tiggo 4 Pro в каталоге"><img src="../assets/catalog-chery-tiggo.png" alt="Серый Chery Tiggo 4 Pro 2024 года" loading="lazy" /><span class="car-card-arrow">↗</span></a>
+              <div class="car-card-content"><div class="car-card-title"><div><span>Кроссовер · 2024</span><h3>Chery Tiggo 4 Pro</h3></div><strong>1 469 000 ₽</strong></div><div class="car-card-meta"><span>Вариатор</span><span>Первый взнос <b>367 250 ₽</b></span></div><div class="car-card-finance"><div class="finance-term"><span>Срок рассрочки</span><div class="term-options" role="group" aria-label="Срок рассрочки для Chery Tiggo 4 Pro"><button type="button" data-term="12">12</button><button class="is-active" type="button" data-term="24">24</button><button type="button" data-term="36">36</button></div></div><div class="finance-payment"><span>Платёж в месяц<small>ориентировочный расчёт</small></span><strong data-payment aria-live="polite">45 907 ₽</strong></div></div></div>
+            </article>
+            <article class="car-card" data-brand="Hyundai" data-model="Tucson" data-year="2021" data-price="2399000" data-down-payment="599750">
+              <a class="car-card-image" href="https://s-auto.company/catalog/92895-hyundai-tucson-iv/" aria-label="Открыть Hyundai Tucson в каталоге"><img src="../assets/catalog-hyundai-tucson.png" alt="Чёрный Hyundai Tucson 2021 года" loading="lazy" /><span class="car-card-arrow">↗</span></a>
+              <div class="car-card-content"><div class="car-card-title"><div><span>Кроссовер · 2021</span><h3>Hyundai Tucson</h3></div><strong>2 399 000 ₽</strong></div><div class="car-card-meta"><span>Автомат</span><span>Первый взнос <b>599 750 ₽</b></span></div><div class="car-card-finance"><div class="finance-term"><span>Срок рассрочки</span><div class="term-options" role="group" aria-label="Срок рассрочки для Hyundai Tucson"><button type="button" data-term="12">12</button><button class="is-active" type="button" data-term="24">24</button><button type="button" data-term="36">36</button></div></div><div class="finance-payment"><span>Платёж в месяц<small>ориентировочный расчёт</small></span><strong data-payment aria-live="polite">74 969 ₽</strong></div></div></div>
+            </article>
+            <article class="car-card" data-brand="Genesis" data-model="G80" data-year="2017" data-price="2050000" data-down-payment="512500">
+              <a class="car-card-image" href="https://s-auto.company/catalog/92894-genesis-g80-i/" aria-label="Открыть Genesis G80 в каталоге"><img src="../assets/catalog-genesis-g80.png" alt="Тёмно-синий Genesis G80 2017 года" loading="lazy" /><span class="car-card-arrow">↗</span></a>
+              <div class="car-card-content"><div class="car-card-title"><div><span>Седан · 2017</span><h3>Genesis G80</h3></div><strong>2 050 000 ₽</strong></div><div class="car-card-meta"><span>Автомат</span><span>Первый взнос <b>512 500 ₽</b></span></div><div class="car-card-finance"><div class="finance-term"><span>Срок рассрочки</span><div class="term-options" role="group" aria-label="Срок рассрочки для Genesis G80"><button type="button" data-term="12">12</button><button class="is-active" type="button" data-term="24">24</button><button type="button" data-term="36">36</button></div></div><div class="finance-payment"><span>Платёж в месяц<small>ориентировочный расчёт</small></span><strong data-payment aria-live="polite">64 063 ₽</strong></div></div></div>
+            </article>
+            <article class="car-card" data-brand="Honda" data-model="Fit" data-year="2022" data-price="1349000" data-down-payment="337250">
+              <a class="car-card-image" href="https://s-auto.company/catalog/92890-honda-fit-2022-goda-v-krasnoyarske/" aria-label="Открыть Honda Fit в каталоге"><img src="../assets/catalog-honda-fit.webp" alt="Чёрный Honda Fit 2022 года" loading="lazy" /><span class="car-card-arrow">↗</span></a>
+              <div class="car-card-content"><div class="car-card-title"><div><span>Хэтчбек · 2022</span><h3>Honda Fit</h3></div><strong>1 349 000 ₽</strong></div><div class="car-card-meta"><span>Автомат</span><span>Первый взнос <b>337 250 ₽</b></span></div><div class="car-card-finance"><div class="finance-term"><span>Срок рассрочки</span><div class="term-options" role="group" aria-label="Срок рассрочки для Honda Fit"><button type="button" data-term="12">12</button><button class="is-active" type="button" data-term="24">24</button><button type="button" data-term="36">36</button></div></div><div class="finance-payment"><span>Платёж в месяц<small>ориентировочный расчёт</small></span><strong data-payment aria-live="polite">42 157 ₽</strong></div></div></div>
+            </article>
+            <article class="car-card" data-brand="Toyota" data-model="Corolla" data-year="2013" data-price="1099000" data-down-payment="274750">
+              <a class="car-card-image" href="https://s-auto.company/catalog/92889-toyota-corolla-2013-goda-v-krasnoyarske/" aria-label="Открыть Toyota Corolla в каталоге"><img src="../assets/catalog-toyota-corolla.webp" alt="Чёрная Toyota Corolla 2013 года" loading="lazy" /><span class="car-card-arrow">↗</span></a>
+              <div class="car-card-content"><div class="car-card-title"><div><span>Седан · 2013</span><h3>Toyota Corolla</h3></div><strong>1 099 000 ₽</strong></div><div class="car-card-meta"><span>Автомат</span><span>Первый взнос <b>274 750 ₽</b></span></div><div class="car-card-finance"><div class="finance-term"><span>Срок рассрочки</span><div class="term-options" role="group" aria-label="Срок рассрочки для Toyota Corolla"><button type="button" data-term="12">12</button><button class="is-active" type="button" data-term="24">24</button><button type="button" data-term="36">36</button></div></div><div class="finance-payment"><span>Платёж в месяц<small>ориентировочный расчёт</small></span><strong data-payment aria-live="polite">34 344 ₽</strong></div></div></div>
+            </article>
+            <article class="car-card" data-brand="Kia" data-model="Rio" data-year="2017" data-price="1399000" data-down-payment="349750">
+              <a class="car-card-image" href="https://s-auto.company/catalog/92888-kia-rio-2017-goda-v-krasnoyarske/" aria-label="Открыть Kia Rio в каталоге"><img src="../assets/catalog-kia-rio.webp" alt="Чёрный Kia Rio 2017 года" loading="lazy" /><span class="car-card-arrow">↗</span></a>
+              <div class="car-card-content"><div class="car-card-title"><div><span>Седан · 2017</span><h3>Kia Rio</h3></div><strong>1 399 000 ₽</strong></div><div class="car-card-meta"><span>Автомат</span><span>Первый взнос <b>349 750 ₽</b></span></div><div class="car-card-finance"><div class="finance-term"><span>Срок рассрочки</span><div class="term-options" role="group" aria-label="Срок рассрочки для Kia Rio"><button type="button" data-term="12">12</button><button class="is-active" type="button" data-term="24">24</button><button type="button" data-term="36">36</button></div></div><div class="finance-payment"><span>Платёж в месяц<small>ориентировочный расчёт</small></span><strong data-payment aria-live="polite">43 719 ₽</strong></div></div></div>
+            </article>
+          </div>
+
+          <div class="catalog-empty" id="catalog-empty" hidden><span>0</span><h3>Автомобили не найдены</h3><p>Измените параметры фильтра или оставьте заявку — подберём автомобиль на внешних площадках.</p><button class="button js-open-modal" type="button">Оставить заявку <span>↗</span></button></div>
+          <div class="catalog-market-note"><span class="catalog-market-icon">+</span><p><b>Не нашли подходящий вариант?</b> Выберите автомобиль на Дроме, Авито или Авто.ру — мы проверим его, выкупим и оформим рассрочку.</p><button class="text-button dark-text js-open-modal" type="button">Отправить ссылку <span class="play">↗</span></button></div>
+        </section>
+      </main>
+
+      <footer class="footer" id="contacts" aria-label="Подвал сайта">
+        <div class="footer-grid">
+          <div class="footer-identity">
+            <a class="footer-brand" href="../" aria-label="S-AUTO — на главную"><img class="brand-logo" src="../assets/s-auto-logo-light.png" alt="S-AUTO" /></a>
+            <nav class="footer-nav" aria-label="Основные разделы">
+              <a href="../about/">Компания</a><a href="../#conditions">Условия</a><a href="./">Каталог</a><a href="../calculator/">Калькулятор</a><a href="https://s-auto.company/portfolio/">Портфолио</a>
+            </nav>
+          </div>
+          <nav class="footer-nav footer-nav-secondary" aria-label="Информация">
+            <a href="../news/">Статьи</a><a href="https://s-auto.company/information/faq/">Вопрос-ответ</a><a href="#contacts">Контакты</a><a href="https://s-auto.company/agreement/">Обработка персональных данных</a><a href="https://s-auto.company/politika-konfidencialnosti/">Политика конфиденциальности</a>
+          </nav>
+          <div class="footer-contact">
+            <a class="footer-contact-row footer-phone" href="tel:+79080228000"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7.6 3.5 10 7.8 7.8 9.7a15.4 15.4 0 0 0 6.5 6.5l1.9-2.2 4.3 2.4v2.3c0 1-.8 1.8-1.8 1.8A15.2 15.2 0 0 1 3.5 5.3c0-1 .8-1.8 1.8-1.8h2.3Z" /></svg><span>+7 (908) 022-80-00</span></a>
+            <a class="footer-contact-row" href="mailto:s-auto@internet.ru"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3.5 5.5h17v13h-17z" /><path d="m4 6 8 6 8-6" /></svg><span>S-AUTO@INTERNET.RU</span></a>
+            <address class="footer-contact-row"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" /><circle cx="12" cy="10" r="2.5" /></svg><span>г. Красноярск, ул. 78<br />Добровольческой бригады 14б,<br />оф. №63</span></address>
+            <div class="footer-legal"><p>ООО «КрасЦентр» 2026 ©</p><p>Все права защищены</p><p>«Зарегистрировано в базе данных (реестре) Российского авторского общества КОПИРУС»</p><img class="copyrus-logo" src="../assets/copyrus.png" alt="КОПИРУС" /></div>
+            <p class="footer-developer">Разработано в <a href="https://xverst.ru/">xverst.ru</a></p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <dialog class="modal" id="request-modal">
+      <button class="modal-close" type="button" aria-label="Закрыть">×</button>
+      <span class="eyebrow dark"><span></span> Заявка на рассрочку</span>
+      <h2>Обсудим условия<br />и подберём автомобиль</h2>
+      <p>Оставьте контакты — специалист S-AUTO перезвонит вам в течение рабочего дня.</p>
+      <form id="request-form">
+        <label>Ваше имя<input name="name" autocomplete="name" placeholder="Александр" required /></label>
+        <label>Телефон<input name="phone" inputmode="tel" autocomplete="tel" placeholder="+7 900 000-00-00" required /></label>
+        <button class="button" type="submit">Отправить заявку <span>↗</span></button>
+        <small>Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.</small>
+      </form>
+      <div class="success" hidden><span>✓</span><h3>Заявка принята</h3><p>Спасибо! Мы свяжемся с вами в рабочее время.</p></div>
+    </dialog>
+    <script src="../catalog.js?v=20260919-1"></script>
+  </body>
+</html>
